@@ -138,13 +138,13 @@ const Footer = () => {
       <div className="border-t border-sky-800 bg-sky-800">
         <div className="max-w-7xl mx-auto px-4 py-3 md:py-4">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-3 md:space-y-0">
-            <p className="text-sky-300 text-xs md:text-sm text-center md:text-left">
+            <p className="text-white text-xs md:text-sm text-center md:text-left">
               © {new Date().getFullYear()} Vidya Bharati English Medium Primary School. All rights reserved.
             </p>
             <div className="flex flex-wrap justify-center md:justify-end space-x-4 md:space-x-6">
-              <a href="#" className="text-sky-300 hover:text-yellow-400 text-xs md:text-sm transition-colors">Privacy Policy</a>
-              <a href="#" className="text-sky-300 hover:text-yellow-400 text-xs md:text-sm transition-colors">Terms of Service</a>
-              <a href="#" className="text-sky-300 hover:text-yellow-400 text-xs md:text-sm transition-colors">Sitemap</a>
+              <a href="#" className="text-white hover:text-yellow-400 text-xs md:text-sm transition-colors">Privacy Policy</a>
+              <a href="#" className="text-white hover:text-yellow-400 text-xs md:text-sm transition-colors">Terms of Service</a>
+              <a href="#" className="text-white hover:text-yellow-400 text-xs md:text-sm transition-colors">Sitemap</a>
             </div>
           </div>
         </div>
