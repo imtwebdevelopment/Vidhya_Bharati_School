@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, Fragment } from "react";
+import React, { useEffect, useState, Fragment } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence, useScroll, useSpring } from "framer-motion";
 import logoImage from "../assets/Emblemlogo.jpg";
@@ -21,9 +21,9 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [admissionHover, setAdmissionHover] = useState(false);
   const [aboutHover, setAboutHover] = useState(false);
-  const [isCondensed, setIsCondensed] = useState(false);
+  const [isNavSticky, setIsNavSticky] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
   const location = useLocation();
-  const tickingRef = useRef(false);
 
   // Exact Colors
   const brandDarkBlue = "#0a4d6e"; 
@@ -51,9 +51,9 @@ const Navbar = () => {
     { label: "Online Form", to: "/onlineformfields" },
   ];
 
-  const subNavItems = [
+  const firstSubNavItems = [
     { label: "Management", to: "/management" },
-    { label: " Vision & Mission", to: "/mission-vision" },
+    { label: "Vision & Mission", to: "/mission-vision" },
     { label: "Activities", to: "/schoollife-activities"},
     { label: "History", to: "/history" },
     { label: "Our Staff", to: "/our-staff" },
@@ -81,35 +81,42 @@ const Navbar = () => {
     exit: { opacity: 0, y: -8, transition: { duration: 0.12 } },
   };
 
-  // --- REDUCED HEIGHTS ---
-  const subNavH = 32;     // Reduced from 40
-  const logoRowH = 80;    // Reduced from 100
-  const totalHiddenHeight = subNavH + logoRowH;
-  const yOffset = isCondensed ? -totalHiddenHeight : 0;
-  const spacerHeight = totalHiddenHeight + 40; // Reduced gap
-
+  // ✅ COMPLETE NAV SCROLL LOGIC: மூன்று nav-யும் ஒன்றாக sticky ஆக
   useEffect(() => {
-    const onScroll = () => {
-      const y = window.scrollY || 0;
-      if (!tickingRef.current) {
-        window.requestAnimationFrame(() => {
-          setIsCondensed(y > 20);
-          tickingRef.current = false;
-        });
-        tickingRef.current = true;
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      if (currentScrollY > 100) {
+        // Scroll down > 100px - மூன்று nav-யும் sticky
+        setIsNavSticky(true);
+      } else {
+        // Scroll top - மூன்று nav-யும் normal position
+        setIsNavSticky(false);
       }
+      
+      setLastScrollY(currentScrollY);
     };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
+  // Close mobile menu when scrolling
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      setIsMobileMenuOpen(false);
+    }
+  }, [location.pathname]);
 
   return (
     <Fragment>
+      {/* Main Container - position fixed but transforms based on scroll */}
       <motion.div 
-        className="w-full fixed top-0 z-50 shadow-2xl" 
-        animate={{ y: yOffset }} 
-        transition={{ type: "spring", stiffness: 400, damping: 40 }}
-        style={{ backgroundColor: brandDarkBlue }}
+        className="w-full fixed top-0 z-50 transition-all duration-300"
+        style={{ 
+          backgroundColor: brandDarkBlue,
+          transform: isNavSticky ? "translateY(-40px)" : "translateY(0px)"
+        }}
       >
         {/* Progress Bar */}
         <div className="relative">
@@ -119,76 +126,79 @@ const Navbar = () => {
           />
         </div>
 
-        {/* Sub-Navigation */}
-        <div className="w-full py-1 border-b border-white/10" style={{ height: `${subNavH}px` }}>
-          <div className="max-w-7xl mx-auto px-4 flex items-center h-full">
-            <div className="hidden md:flex items-center justify-center w-full space-x-6 text-[10px] font-medium text-white/80 uppercase">
-              {subNavItems.map((item, idx) => (
+        {/* 1. FIRST SUB-NAV - மூன்று nav-யும் ஒன்றாக sticky ஆகும் */}
+        <div className="w-full py-1 border-b border-white/10 bg-gradient-to-r from-blue-900/50 to-darkBlue/50">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="hidden md:flex items-center justify-center w-full space-x-6 text-[10px] font-medium text-white/80 uppercase py-1">
+              {firstSubNavItems.map((item, idx) => (
                 <React.Fragment key={item.label}>
-                  <Link to={item.to} className="hover:text-yellow-400 transition-colors">
+                  <Link to={item.to} className="hover:text-yellow-400 transition-colors whitespace-nowrap">
                     {item.label}
                   </Link>
-                  {idx < subNavItems.length - 1 && <div className="w-px h-2 bg-white/20" />}
+                  {idx < firstSubNavItems.length - 1 && <div className="w-px h-2 bg-white/20" />}
                 </React.Fragment>
               ))}
             </div>
           </div>
         </div>
 
-        {/* BRANDING SECTION */}
-        <div className="max-w-7xl mx-auto px-4 flex items-center" style={{ height: `${logoRowH}px` }}>
-          <div className="flex items-center justify-between w-full">
-            <Link to="/" className="flex items-center gap-4">
-              <div className="rounded-full bg-white p-1 shadow-lg">
-                <img src={logoImage} alt="Logo" className="w-11 h-11 object-cover rounded-full" />
-              </div>
-              <div>
-                <div 
-                  className="text-xl md:text-2xl font-black tracking-tighter leading-none"
-                  style={{ color: brandPink }}
-                >
-                  VIDYA BHARATI ENGLISH
+        {/* 2. SECOND SUB-NAV (BRANDING) */}
+        <div className="w-full bg-black/20 backdrop-blur-md">
+          <div className="max-w-7xl mx-auto px-4 py-2">
+            <div className="flex items-center justify-between w-full">
+              <Link to="/" className="flex items-center gap-4">
+                <div className="rounded-full bg-white p-1 shadow-lg">
+                  <img src={logoImage} alt="Logo" className="w-11 h-11 object-cover rounded-full" />
                 </div>
-                <div 
-                  className="text-[12px] md:text-sm font-bold tracking-wide uppercase leading-tight"
-                  style={{ color: brandSkyBlue }}
-                >
-                  MEDIUM PRIMARY SCHOOL (CBSE)
-                </div>
-              </div>
-            </Link>
-
-            {/* Contact Info */}
-            <div className="hidden lg:flex items-center gap-5 text-white">
-              <div className="flex items-center gap-2">
-                <div className="p-1.5 bg-white/10 rounded-full"><PhoneIcon /></div>
                 <div>
+                  <div 
+                    className="text-xl md:text-2xl font-black tracking-tighter leading-none"
+                    style={{ color: brandPink }}
+                  >
+                    VIDYA BHARATI ENGLISH
+                  </div>
+                  <div 
+                    className="text-[12px] md:text-sm font-bold tracking-wide uppercase leading-tight"
+                    style={{ color: brandSkyBlue }}
+                  >
+                    MEDIUM PRIMARY SCHOOL (CBSE)
+                  </div>
+                </div>
+              </Link>
+
+              {/* Contact Info */}
+              <div className="hidden lg:flex items-center gap-5 text-white">
+                <div className="flex items-center gap-2">
+                  <div className="p-1.5 bg-white/10 rounded-full"><PhoneIcon /></div>
+                  <div>
                     <p className="text-[9px] opacity-60 font-bold uppercase leading-none">Call Us</p>
                     <p className="text-xs font-bold">+91 8532-221980</p>
+                  </div>
                 </div>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="p-1.5 bg-white/10 rounded-full"><MailIcon /></div>
-                <div>
+                <div className="flex items-center gap-2">
+                  <div className="p-1.5 bg-white/10 rounded-full"><MailIcon /></div>
+                  <div>
                     <p className="text-[9px] opacity-60 font-bold uppercase leading-none">Email</p>
                     <p className="text-xs font-bold">vbskcbse2014@gmail.com</p>
+                  </div>
                 </div>
               </div>
+
+              {/* Mobile Menu Button */}
+              <button 
+                className="md:hidden text-white p-2"
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              >
+                <MenuIcon />
+              </button>
             </div>
           </div>
         </div>
 
-        {/* Main Navigation Row */}
-        <div className="w-full py-0 border-t border-white/10 bg-black/20 backdrop-blur-md">
-          <div className="max-w-7xl mx-auto px-4 flex items-center justify-center">
-            <button 
-              className="md:hidden text-white py-2"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            >
-              <MenuIcon />
-            </button>
-
-            <div className="hidden md:flex items-center space-x-1">
+        {/* 3. MAIN NAVIGATION */}
+        <div className="w-full py-0 bg-black/20 backdrop-blur-md border-t border-white/10">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="hidden md:flex items-center justify-center">
               {mainNavItems.map((item) => {
                 const isAbout = item.label === "ABOUT US";
                 const isAdmission = item.label === "ADMISSIONS";
@@ -197,12 +207,18 @@ const Navbar = () => {
                   <div 
                     key={item.label}
                     className="relative group"
-                    onMouseEnter={() => { if(isAbout) setAboutHover(true); if(isAdmission) setAdmissionHover(true); }}
-                    onMouseLeave={() => { setAboutHover(false); setAdmissionHover(false); }}
+                    onMouseEnter={() => { 
+                      if(isAbout) setAboutHover(true); 
+                      if(isAdmission) setAdmissionHover(true); 
+                    }}
+                    onMouseLeave={() => { 
+                      setAboutHover(false); 
+                      setAdmissionHover(false); 
+                    }}
                   >
                     <Link 
-                        to={item.to} 
-                        className={`px-4 py-2 text-[10px] font-black uppercase tracking-[0.1em] flex items-center gap-1 ${isActive(item.to)}`}
+                      to={item.to} 
+                      className={`px-4 py-3 text-[10px] font-black uppercase tracking-[0.1em] flex items-center gap-1 ${isActive(item.to)}`}
                     >
                       {item.label}
                       {(isAbout || isAdmission) && <ChevronDown />}
@@ -211,13 +227,17 @@ const Navbar = () => {
                     <AnimatePresence>
                       {((isAbout && aboutHover) || (isAdmission && admissionHover)) && (
                         <motion.div
-                          initial="hidden" animate="visible" exit="exit" variants={dropdownVariants}
-                          className="absolute top-full left-0 w-52 bg-white rounded-b-xl shadow-2xl py-1 mt-0 overflow-hidden"
+                          initial="hidden" 
+                          animate="visible" 
+                          exit="exit" 
+                          variants={dropdownVariants}
+                          className="absolute top-full left-0 w-52 bg-white rounded-b-xl shadow-2xl py-1 mt-0 overflow-hidden z-50"
                         >
                           {(isAbout ? aboutItems : admissionItems).map((sub) => (
                             <Link 
-                                key={sub.label} to={sub.to} 
-                                className="block px-4 py-1.5 text-xs text-slate-800 hover:bg-slate-100 transition-colors font-semibold"
+                              key={sub.label} 
+                              to={sub.to} 
+                              className="block px-4 py-1.5 text-xs text-slate-800 hover:bg-slate-100 transition-colors font-semibold"
                             >
                               {sub.label}
                             </Link>
@@ -232,31 +252,35 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu - இதுவும் sticky-ஓடு சேர்ந்து move ஆகும் */}
         <AnimatePresence>
           {isMobileMenuOpen && (
             <motion.div 
               initial={{ opacity: 0, height: 0 }} 
               animate={{ opacity: 1, height: "auto" }} 
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden bg-[#0a4d6e] border-t border-white/10 px-4 py-4 space-y-3 max-h-[80vh] overflow-y-auto"
+              className="md:hidden bg-[#0a4d6e] border-t border-white/10 px-4 py-4 space-y-3 max-h-[80vh] overflow-y-auto shadow-lg"
             >
               {mainNavItems.map(item => (
                 <div key={item.label}>
-                  <Link to={item.to} className="block text-white font-bold py-1.5 border-b border-white/5 text-sm" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Link 
+                    to={item.to} 
+                    className="block text-white font-bold py-2 border-b border-white/5 text-sm hover:bg-white/10 px-2 rounded"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
                     {item.label}
                   </Link>
                 </div>
               ))}
 
-              <div className="pt-2 mt-2 border-t border-white/20">
-                <p className="text-yellow-400 text-[9px] uppercase font-black tracking-widest mb-2">Quick Links</p>
-                <div className="grid grid-cols-2 gap-2">
-                  {subNavItems.map(item => (
+              <div className="pt-4 mt-4 border-t border-white/20">
+                <p className="text-yellow-400 text-[10px] uppercase font-black tracking-widest mb-3">Quick Links</p>
+                <div className="grid grid-cols-2 gap-3">
+                  {firstSubNavItems.map(item => (
                     <Link 
                       key={item.label} 
                       to={item.to} 
-                      className="text-white/80 text-[11px] font-semibold py-1 hover:text-white"
+                      className="text-white/80 text-[11px] font-semibold py-1.5 hover:text-white hover:bg-white/10 px-2 rounded transition-colors"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       {item.label}
@@ -264,12 +288,41 @@ const Navbar = () => {
                   ))}
                 </div>
               </div>
+
+              {/* Mobile Contact Info */}
+              <div className="pt-4 mt-4 border-t border-white/20">
+                <p className="text-yellow-400 text-[10px] uppercase font-black tracking-widest mb-3">Contact Info</p>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <div className="p-1.5 bg-white/10 rounded-full"><PhoneIcon /></div>
+                    <div>
+                      <p className="text-[9px] opacity-60 font-bold uppercase leading-none">Call Us</p>
+                      <p className="text-xs font-bold text-white">+91 8532-221980</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="p-1.5 bg-white/10 rounded-full"><MailIcon /></div>
+                    <div>
+                      <p className="text-[9px] opacity-60 font-bold uppercase leading-none">Email</p>
+                      <p className="text-xs font-bold text-white">vbskcbse2014@gmail.com</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </motion.div>
           )}
         </AnimatePresence>
       </motion.div>
 
-      <div style={{ height: `${spacerHeight}px` }} aria-hidden="true" />
+      {/* Spacer - scroll-லே height மாறும் */}
+      <motion.div 
+        className="w-full"
+        animate={{ 
+          height: isNavSticky ? "100px" : "140px" 
+        }}
+        transition={{ duration: 0.3 }}
+        aria-hidden="true" 
+      />
     </Fragment>
   );
 };
