@@ -45,7 +45,7 @@ const clubs = [
   { icon: "🎼", title: "Music & Dance", text: "Classical dance and singing sessions.", color: "border-blue-400" },
   { icon: "🤖", title: "STEM", text: "Robotics and science experiments.", color: "border-yellow-400" },
   { icon: "📚", title: "Reading", text: "Book club and library activities.", color: "border-emerald-400" },
-  { icon: "⚽", title: "Sports", text: "Football, yoga, and athletics.", color: "border-sky-400" },
+  { icon: "⚽", title: "Sports", text: "	Basketball,Cricket,Fitness & Games,Chess,	Football,Vollyball,Karate", color: "border-sky-400" },
   { icon: "🌱", title: "Eco Club", text: "Green drives and plantation.", color: "border-green-400" },
 ];
 
@@ -109,12 +109,20 @@ const SchoolLifeActivities = () => {
           </div>
         </div>
       </section>
-
+      
       {/* CLUBS SECTION */}
       <section className="py-10 px-4">
         <div className="max-w-6xl mx-auto">
+           <div className="flex items-center gap-4 mb-8">
+            <h2 className="text-2xl font-black text-white uppercase tracking-wider">Liberal Arts And Sports Tradition</h2>
+            <div className="h-1 flex-grow bg-gradient-to-r from-yellow-400 to-transparent rounded-full"></div>
+          </div>
+            <p className="text-base text-slate-300 mx-auto font-medium mb-10 ">
+          We value the role of sports and arts in life. It is an integral part of our student’s learning experience. We believe in the positive benefits of participating in individual / team sports and performing arts. We deliver a curriculum that gives children the opportunity to experience a wide range of activities in an atmosphere of enjoyment and personal development. Through a mixture of competitive and non-competitive activities, the students learn about cooperation and evaluating performance. They also learn about making choices and about balanced and healthy lifestyles. From our Pre-Nursery year right through to our Grade 12, all students benefit from lessons delivered by specialist Sports & Arts coaches & teachers. Our scripted curriculum for Sports & Arts gives the children an opportunity to try out a wide range of different activities. Our students have access to state-of-the-art facilities for Football, Swimming, Basketball, Handball, Cricket, Judo, Skating, and Gymnastics, while 
+          they are also trained in Dance, Music, Drama, Theatre, Photography, Short Filmmaking and many more.
+          </p>
           <div className="flex items-center gap-4 mb-8">
-            <h2 className="text-2xl font-black text-white uppercase tracking-wider">Hobby Clubs</h2>
+            <h2 className="text-2xl font-black text-white uppercase tracking-wider">Skill Development Activities</h2>
             <div className="h-1 flex-grow bg-gradient-to-r from-yellow-400 to-transparent rounded-full"></div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -128,7 +136,25 @@ const SchoolLifeActivities = () => {
           </div>
         </div>
       </section>
-
+   <div className="max-w-6xl mx-auto">
+   <div className="flex items-center gap-4 mb-8">
+            <h2 className="text-2xl font-black text-white uppercase tracking-wider p-2">Post School Activities</h2>
+            <div className="h-1 flex-grow bg-gradient-to-r from-yellow-400 to-transparent rounded-full"></div>
+          </div>
+           <p className="text-base text-slate-300 mx-auto font-medium mb-5 p-2">
+          While students usually have the opportunity to pursue a wide range of core subjects and electives during school hours, post-school activities provide them with an additional opportunity after school, to explore an interest in more depth or even find
+           a new passion, which they, themselves might not have been aware of earlier.
+          </p>
+           <p className="text-base text-slate-300 mx-auto font-medium mb-5 p-2">
+          While students usually have the opportunity to pursue a wide range of core subjects and electives during school hours, post-school activities provide them with an additional opportunity after school, to explore an interest in more depth or even find
+           a new passion, which they, themselves might not have been aware of earlier.
+          </p>
+          
+           <p className="text-base text-slate-300 mx-auto font-medium mb-10 p-2">
+         Additionally, our proficient trainers and coaches constantly engage with our young students while enhancing their knowledge, highlighting their achievements, challenging their thought-processes 
+         and holistically nourishing their untapped capabilities.
+          </p>
+          </div>
       {/* SCHEDULE & HIGHLIGHTS */}
       <section className="py-12 px-4">
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10">

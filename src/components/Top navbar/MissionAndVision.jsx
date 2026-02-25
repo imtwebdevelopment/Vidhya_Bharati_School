@@ -56,8 +56,8 @@ const MissionAndVision = () => {
                 className="bg-white p-8 rounded-2xl shadow-sm border-l-8 border-pink-500"
               >
                 <h2 className="text-3xl font-black uppercase tracking-tight text-slate-800 mb-4">Vision</h2>
-                <p className="text-slate-600 leading-relaxed text-lg italic">
-                  "To develop a National System of Education which would help to build a generation of young men and women that is committed to Hindutva and infused with patriotic fervor."
+                <p className="text-slate-600 leading-relaxed text-lg ">
+                  "At Vbsk Vilas Institutions, education is a noble instrument with which we mould future generations into responsible citizens and good human beings".
                 </p>
               </motion.div>
 
@@ -70,8 +70,12 @@ const MissionAndVision = () => {
               >
                 <h2 className="text-3xl font-black uppercase tracking-tight text-slate-800 mb-4">Mission</h2>
                 <p className="text-slate-600 leading-relaxed text-lg">
-                  "To provide holistic education that integrates physical, mental, intellectual and spiritual development through the Panchapadi system, nurturing every child to reach their full potential."
+                  	"To provide our students ample opportunities and means to help them imbibe, all into their character that is fair, moral and pious. To impart a strong sense of culture, values and deep knowledge to our students, so that each one is looked upon as a role model by the present and following generations".
                 </p>
+                  <p  className="text-slate-600 mt-2 leading-relaxed text-lg">
+              " To impart value based Quality Education with an analytical approach to enable
+               students to convert acquired knowledge into wisdom which help them to be worthy human beings".
+            </p>
               </motion.div>
             </div>
 

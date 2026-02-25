@@ -89,19 +89,17 @@ function AboutVBSKCBSE() {
           <div className="w-20 h-1 bg-yellow-400 mb-10"></div>
 
           <p className="text-lg text-gray-600 max-w-4xl mb-6 leading-relaxed">
-            Vidya Bharati Akhil Bharatiya Shiksha Sansthan believes that education
-            is not merely the acquisition of information, but the complete
-            development of the child’s personality. Our education system focuses
-            on physical, mental, intellectual, moral, and spiritual growth.
-          </p>
+           VIBGYOR High's journey towards education excellence began in 2004 with an
+            ideal mix of academic and corporate professionals who felt the shared need to provide 
+            inclusive education. At VIDAY BHARATI CBSE Schools, we challenge our students with a
+             unique educational experience which emphasises a seamless blend of academics, sports,
+              performing arts, community and experiential learning programmes. Today we are one of the 
+              leading schools in the nation, offering a wide choice of educational streams such as the Council 
+              for The Indian School Certificate Examinations (CISCE), Central Board of Secondary Education
+               (CBSE) and University of Cambridge International Education (CIE) as well as the option of
+                National and International curriculum for students up to Grades K-12.
 
-          <p className="text-lg text-gray-600 max-w-4xl mb-10 leading-relaxed">
-            At Vidya Bharati English Medium Primary School, we strive to blend
-            modern education with timeless Indian values, ensuring that students
-            grow into disciplined individuals with a strong sense of national
-            pride and social responsibility.
           </p>
-
           <div className="space-y-5">
             {[
               ["V", "Value-based Education"],
@@ -157,19 +155,21 @@ function AboutVBSKCBSE() {
           <div className="bg-white/10 p-8">
             <h3 className="text-3xl font-extrabold mb-4">Our Mission</h3>
             <p className="text-lg opacity-90 leading-relaxed">
-              Our mission is to provide holistic education that integrates
-              academic excellence with moral values, discipline, and cultural
-              awareness. We aim to inspire students to become confident learners
-              and responsible citizens of the nation.
+            "To provide our students ample opportunities and means to help them imbibe, all into their character that is fair, moral and pious. To impart a strong sense of culture, values and deep knowledge to our students,
+             so that each one is looked upon as a role model by the present and following generations".
+            </p>
+
+            <p  className="text-lg opacity-90 leading-relaxed">
+             " To impart value based Quality Education with an analytical approach to enable
+               students to convert acquired knowledge into wisdom which help them to be worthy human beings".
             </p>
           </div>
 
           <div className="bg-white/10 p-8">
             <h3 className="text-3xl font-extrabold mb-4">Our Vision</h3>
             <p className="text-lg opacity-90 leading-relaxed">
-              Our vision is to nurture young minds in a caring and supportive
-              environment where every child is encouraged to explore knowledge,
-              develop character, and contribute positively to society.
+            "At Vbsk Vilas Institutions, education is a noble instrument with which we mould 
+            future generations into responsible citizens and good human beings"
             </p>
           </div>
         </div>

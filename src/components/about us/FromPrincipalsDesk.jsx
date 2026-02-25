@@ -75,7 +75,7 @@ const FromPrincipalsDesk = () => {
 
                   {/* ✅ Dummy Image Only */}
                   <img
-                    src="https://via.placeholder.com/800x600?text=Principal+Photo"
+                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop"
                     alt="Principal"
                     className="relative w-full h-[400px] object-cover rounded-3xl border-4 border-white shadow-2xl"
                   />

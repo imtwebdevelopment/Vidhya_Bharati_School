@@ -9,18 +9,18 @@ import image431 from '../assets/431.jpg';
 
 // --- Animated Icon for Load/View Details ---
 const AnimatedArrow = () => (
-    <motion.svg
-        className="w-4 h-4 ml-1"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-        initial={{ x: 0 }}
-        animate={{ x: [0, 4, 0] }}
-        transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
-    >
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-    </motion.svg>
+  <motion.svg
+    className="w-4 h-4 ml-1"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+    initial={{ x: 0 }}
+    animate={{ x: [0, 4, 0] }}
+    transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+  </motion.svg>
 );
 
 const Disclosure = () => {
@@ -122,8 +122,8 @@ const Disclosure = () => {
         </thead>
         <tbody>
           {data.map((item, index) => (
-            <motion.tr 
-              key={index} 
+            <motion.tr
+              key={index}
               className={`border-b ${index % 2 === 0 ? 'bg-white' : 'bg-sky-50'}`}
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -135,7 +135,7 @@ const Disclosure = () => {
               <td className="px-3 md:px-5 py-3 text-xs md:text-sm">
                 {hasDocument ? (
                   item.document ? (
-                    <motion.button 
+                    <motion.button
                       onClick={() => handleViewDetails(item.image)}
                       className="text-pink-600 hover:text-pink-800 font-bold inline-flex items-center transition-colors duration-200"
                       whileHover={{ scale: 1.05, textShadow: "0 0 5px rgba(236, 72, 153, 0.5)" }}
@@ -159,11 +159,11 @@ const Disclosure = () => {
   );
 
   const renderResultTable = () => (
-    <motion.div 
-        className="mt-8 p-4 bg-yellow-50 rounded-lg shadow-inner border-l-4 border-yellow-400"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+    <motion.div
+      className="mt-8 p-4 bg-yellow-50 rounded-lg shadow-inner border-l-4 border-yellow-400"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
     >
       <h3 className="text-xl font-extrabold text-pink-600 mb-4">RESULT CLASS X</h3>
       <div className="overflow-x-auto">
@@ -193,14 +193,14 @@ const Disclosure = () => {
 
   // Main component return with initial page animation
   return (
-    <motion.div 
-        className="min-h-screen bg-sky-50 py-4 md:py-8"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
+    <motion.div
+      className="min-h-screen bg-sky-50 py-4 md:py-8"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
     >
       <div className="max-w-7xl mx-auto px-4">
-        
+
         {/* Breadcrumb */}
         <div className="mb-4 md:mb-6">
           <nav className="text-xs md:text-sm text-gray-600">
@@ -225,11 +225,10 @@ const Disclosure = () => {
               <motion.button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`px-3 md:px-6 py-3 font-extrabold text-xs md:text-sm transition-all whitespace-nowrap border-b-4 ${
-                  activeTab === tab.id
-                    ? 'text-pink-600 border-pink-500 bg-sky-50 shadow-inner'
-                    : 'text-sky-800 border-transparent hover:text-pink-600 hover:bg-yellow-50'
-                }`}
+                className={`px-3 md:px-6 py-3 font-extrabold text-xs md:text-sm transition-all whitespace-nowrap border-b-4 ${activeTab === tab.id
+                  ? 'text-pink-600 border-pink-500 bg-sky-50 shadow-inner'
+                  : 'text-sky-800 border-transparent hover:text-pink-600 hover:bg-yellow-50'
+                  }`}
                 whileHover={{ scale: 1.05, translateY: -2 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -240,9 +239,9 @@ const Disclosure = () => {
         </div>
 
         {/* Tab Content Container with Layout Animation */}
-        <motion.div 
-            className="bg-white rounded-b-xl rounded-t-none shadow-2xl border-t-2 border-pink-500 p-4 md:p-6"
-            layout // Enables smooth layout animation when content changes
+        <motion.div
+          className="bg-white rounded-b-xl rounded-t-none shadow-2xl border-t-2 border-pink-500 p-4 md:p-6"
+          layout // Enables smooth layout animation when content changes
         >
           <AnimatePresence mode="wait">
             {activeTab === 'A' && (
@@ -313,7 +312,113 @@ const Disclosure = () => {
           </AnimatePresence>
         </motion.div>
       </div>
+        <section className="py-10 px-4 text-center">
+  
+   <h4 className="text-3xl md:text-3xl font-extrabold text-sky-800 mb-2 border-b-4 border-pink-500 inline-block px-4 pb-1">
+           Academic Structure
+  
+        </h4>
+   
 
+  <div className="overflow-x-auto max-w-6xl mx-auto">
+    <table className="min-w-full border border-gray-300 text-left">
+      <thead className="bg-gray-100">
+        <tr>
+          <th className="border border-gray-300 px-4 py-3 text-lg font-semibold">
+            Level
+          </th>
+          <th className="border border-gray-300 px-4 py-3 text-lg font-semibold">
+            Description
+          </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr className="hover:bg-gray-50">
+          <td className="border border-gray-300 px-4 py-3 font-semibold">
+            Primary School
+          </td>
+          <td className="border border-gray-300 px-4 py-3 text-gray-600">
+          The curriculum is designed to draw from their experiences and meet the cognitive and socio-emotional needs of the child. The teachers foster an atmosphere that is personalized and child centered. A lot of stress is laid at this stage on spoken English 
+          with emphasis on good pronunciation and diction coupled with excellent reading and writing skills
+          </td>
+        </tr>
+
+        <tr className="hover:bg-gray-50">
+          <td className="border border-gray-300 px-4 py-3 font-semibold">
+            Middle School
+          </td>
+          <td className="border border-gray-300 px-4 py-3 text-gray-600">
+           Middle school provides a nurturing, secure, and supportive environment that motivates young adolescents to take on challenges
+            in a culture of nurtured risk-taking as the children transition from childhood to adolescence
+          </td>
+        </tr>
+
+        <tr className="hover:bg-gray-50">
+          <td className="border border-gray-300 px-4 py-3 font-semibold">
+            Secondary School (Grades 8–10)
+          </td>
+          <td className="border border-gray-300 px-4 py-3 text-gray-600">
+          For the secondary classes i.e., Grades 8 to 10, the main aim is to provide in-depth knowledge of the concepts. Extensive use of technology supplements classroom teaching thereby making it interactive and thus enhancing comprehension. 
+           The school offers CBSE-recommended schoolbooks and study materials for the students.
+          </td>
+        </tr>
+
+        <tr className="hover:bg-gray-50">
+          <td className="border border-gray-300 px-4 py-3 font-semibold">
+            Senior Secondary (Grades 11–12)
+          </td>
+          <td className="border border-gray-300 px-4 py-3 text-gray-600">
+           For Senior Secondary i.e., Grades 11 and 12, the main aim at this level is to prepare
+            students according to the CBSE curriculum Experienced teachers strive to achieve excellent
+             results through a result-oriented approach to teaching.
+            Students can choose subjects of their choice from several subjects offered
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+      <div className="mb-6 md:mb-8 text-center mt-6">
+        <h1 className="text-3xl md:text-4xl font-extrabold text-sky-800 mb-2 border-b-4 border-pink-500 inline-block px-4 pb-1">
+          Academic Excellence
+        </h1>
+        <p className="text-md text-gray-600 font-medium mt-3 px-4 md:px-2 text-justify leading-relaxed max-w-4xl mx-auto"> At VIDAY BHARATI CBSE Schools, our learners achieve
+          amazing things. Recognised as one of the leading school brands in India, our learners enjoy a remarkable range of innovative learning experiences, which inspire and challenge them to be their very best. This includes exclusive collaborations with abroad universities, one of the widest choices of subjects in India, and more than 50+ extra-curricular clubs and activities. Nurtured by our outstanding teachers facilitating your child’s curiosity and igniting their passions – your child will get a holistic education. At VIDAY BHARATI CBSE Schools helps learners carve their own personal and academic pathways to success along with getting remarkable examination results
+          that will encourage them to be the best they can be, in all areas of their learning.</p>
+      </div>
+
+      <div className="mb-6 md:mb-8 text-center mt-6">
+        <h1 className="text-3xl md:text-4xl font-extrabold text-sky-800 mb-2 border-b-4 border-pink-500 inline-block px-4 pb-1">
+          Education beyond Academics
+        </h1>
+        <p className="text-md text-gray-600 font-medium mt-3 px-4 md:px-2 text-justify leading-relaxed max-w-4xl mx-auto"> At VIDAY BHARATI CBSE Schools, our learners achieve
+          The Emerald International School (EIS) represents a paradigm shift in Indian education.
+          Inspired by the New Education Policy 2020 (NEP 2020), the school instills competency-based higher order thinking in children from a young age to prepare them for a seamless transition to the best universities, careers armed with life preparedness.
+          Get Set To Experience a Difference
+          The EIS experience reverberates throughout the campus. This comes to the fore as soon as you enter the portals.
+          Examples of this experience include a motivating teacher who stays after school to help a student; or the buzz of stimulating conversations in our hallways where the sounds of a diverse and active student population reverberate throughout the day.
+          You also experience a sensation of unrestrained curiosity amongst young minds, and an environment where there is incubation of achievement and innovation. This is a unique and exclusive offering at the School.
+        </p>
+      </div>
+
+      <div className="mb-6 md:mb-8 text-center mt-6">
+        <h4 className="text-3xl md:text-3xl font-extrabold text-sky-800 mb-2 border-b-4 border-pink-500 inline-block px-4 pb-1">
+          Curriculum
+        </h4>
+        <p className="text-md text-gray-600 font-medium mt-3 px-4 md:px-2 text-justify leading-relaxed max-w-4xl mx-auto"> At VIDAY BHARATI CBSE Schools, our learners achieve
+          Learning is a life skill that goes beyond reading and writing. We ensure the right balance of stimulation and age appropriate learning in every child.
+          VBSK emphasises of experiential and exploratory methods of learning.
+          Students are encouraged to present their learning outcomes through presentations, role plays, small skits, quiz or impromptu debates.
+          Students have various out-of classroom activities through Hobby Hours program inclusive of theater, music, visual arts, football, cricket, basketball, gymnastics, karate and many more.
+          At VBSK, we are redefining education with focus on providing a fun-based learning environment. Our ‘Child-Centered’ ideology is the core of our pedagogy which enables us to ensure a child’s development towards success.
+          Our programs are designed to help a child learn & enhance life skills needed to succeed in school & beyond.
+          VBSK Pre-School curriculum is full of fun activities like musical experiences, storytelling, Do it yourself (DIY) kits and a healthy mix of indoor & outdoor play. Each day VBSK introduces a new learning experience to a child.
+        </p>
+      </div>
+   
+
+    
       {/* --- PDF Modal --- */}
       <AnimatePresence>
         {showPdfModal && (

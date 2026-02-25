@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
+import {
   Trophy, ChevronRight, GraduationCap, Play,
   Users, BookOpen, MapPin, Phone, ArrowRight,
   Target, Eye, Star, Award, Youtube
@@ -9,6 +9,8 @@ import {
 import banner1 from "../assets/school banner1.jpeg"
 import banner2 from "../assets/school banner2.jpg"
 //life images 
+import cultural from "../assets/cultural.png"
+import sports from "../assets/sports.png"
 import life1 from "../assets/Life image1.jpeg"
 import life2 from "../assets/Life image2.jpg"
 import life3 from "../assets/Life image3.jpg"
@@ -47,8 +49,8 @@ const Home = () => {
 
   const lifeImages = [
     life1,
-    life2, 
-    life3, 
+    life2,
+    life3,
     life4,
     life5,
     life6,
@@ -57,24 +59,24 @@ const Home = () => {
   ];
 
   const hallmarks = [
-    { letter: 'V', word: 'Value-based Education', color: 'bg-[#E91E63]' }, 
-    { letter: 'I', word: 'Intellectual Growth', color: 'bg-[#FFC107]' },   
-    { letter: 'D', word: 'Disciplined Life', color: 'bg-[#00BCD4]' },      
-    { letter: 'Y', word: 'Yearning for Knowledge', color: 'bg-[#FBC02D]' }, 
-    { letter: 'A', word: 'Abiding Patriotism', color: 'bg-[#F06292]' },    
-    { letter: 'B', word: 'Balanced Development', color: 'bg-[#2196F3]' },  
-    { letter: 'H', word: 'Honesty & Integrity', color: 'bg-[#4CAF50]' },   
+    { letter: 'V', word: 'Value-based Education', color: 'bg-[#E91E63]' },
+    { letter: 'I', word: 'Intellectual Growth', color: 'bg-[#FFC107]' },
+    { letter: 'D', word: 'Disciplined Life', color: 'bg-[#00BCD4]' },
+    { letter: 'Y', word: 'Yearning for Knowledge', color: 'bg-[#FBC02D]' },
+    { letter: 'A', word: 'Abiding Patriotism', color: 'bg-[#F06292]' },
+    { letter: 'B', word: 'Balanced Development', color: 'bg-[#2196F3]' },
+    { letter: 'H', word: 'Honesty & Integrity', color: 'bg-[#4CAF50]' },
     { letter: 'A', word: 'Aesthetic Appreciation', color: 'bg-[#FF9800]' },
-    { letter: 'R', word: 'Respect for Culture', color: 'bg-[#9C27B0]' },   
-    { letter: 'A', word: 'Analytical Thinking', color: 'bg-[#F44336]' },   
-    { letter: 'T', word: 'Team Spirit', color: 'bg-[#009688]' },            
+    { letter: 'R', word: 'Respect for Culture', color: 'bg-[#9C27B0]' },
+    { letter: 'A', word: 'Analytical Thinking', color: 'bg-[#F44336]' },
+    { letter: 'T', word: 'Team Spirit', color: 'bg-[#009688]' },
   ];
 
   const celebrations = [
-    { title: "Annual Sports Meet", thumbnail: "https://images.unsplash.com/photo-1502904550040-753462a4b98c?w=600&q=80" },
+    { title: "Annual Sports Meet", thumbnail: sports },
     { title: "Matru Pooja", thumbnail: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=600&q=80" },
     { title: "Saraswati Vandana", thumbnail: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&q=80" },
-    { title: "Cultural Fest", thumbnail: "https://images.unsplash.com/photo-1610474026332-90176b647970?w=600&q=80" }
+    { title: "Cultural Fest", thumbnail: cultural }
   ];
 
   const testimonials = [
@@ -97,7 +99,7 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-white font-sans text-slate-900 pb-20 overflow-x-hidden">
-      
+
       {/* --- HERO SECTION --- */}
       <section className="relative h-[85vh] w-full overflow-hidden bg-slate-900">
         <AnimatePresence mode="wait">
@@ -110,25 +112,25 @@ const Home = () => {
             className="absolute inset-0"
           >
             <div className="absolute inset-0 bg-black/40 z-10" />
-            <img 
-              src={bannerImages[currentSlide].url} 
-              className="w-full h-full object-cover" 
-              alt="Vidya Bharati Campus" 
+            <img
+              src={bannerImages[currentSlide].url}
+              className="w-full h-full object-cover"
+              alt="Vidya Bharati Campus"
             />
           </motion.div>
         </AnimatePresence>
 
         <div className="relative z-20 h-full max-w-7xl mx-auto px-6 flex flex-col justify-center items-center text-center text-white">
           <AnimatePresence mode="wait">
-            <motion.div 
+            <motion.div
               key={`text-${currentSlide}`}
-              initial={{ y: 40, opacity: 0 }} 
+              initial={{ y: 40, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -40, opacity: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <h1 className="text-4xl md:text-6xl font-black mb-6 leading-tight uppercase">
-                Vidya Bharati <br/> 
+                Vidya Bharati <br />
                 <span className="text-yellow-400 text-3xl md:text-5xl">ENGLISH MEDIUM PRIMARY SCHOOL (CBSE)</span>
               </h1>
               <p className="text-lg md:text-xl font-light mb-10 max-w-2xl mx-auto opacity-90">
@@ -144,26 +146,26 @@ const Home = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="relative group overflow-hidden rounded-lg shadow-2xl bg-black aspect-video">
-                <iframe 
-                    className="w-full h-full"
-                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                    title="Pariksha Pe Charcha | Vidya Bharati"
-                    allowFullScreen
-                ></iframe>
-                <div className="absolute top-0 left-0 right-0 p-4 bg-gradient-to-b from-black/70 to-transparent pointer-events-none">
-                    <p className="text-white text-sm md:text-base font-medium truncate">Pariksha Pe Charcha | Vidya Bharati School</p>
-                </div>
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title="Pariksha Pe Charcha | Vidya Bharati"
+                allowFullScreen
+              ></iframe>
+              <div className="absolute top-0 left-0 right-0 p-4 bg-gradient-to-b from-black/70 to-transparent pointer-events-none">
+                <p className="text-white text-sm md:text-base font-medium truncate">Pariksha Pe Charcha | Vidya Bharati School</p>
+              </div>
             </div>
             <div className="relative group overflow-hidden rounded-lg shadow-2xl bg-black aspect-video">
-                <iframe 
-                    className="w-full h-full"
-                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                    title="Campus Life | Vidya Bharati"
-                    allowFullScreen
-                ></iframe>
-                <div className="absolute top-0 left-0 right-0 p-4 bg-gradient-to-b from-black/70 to-transparent pointer-events-none">
-                    <p className="text-white text-sm md:text-base font-medium truncate">Campus Insights | Vidya Bharati Excellence</p>
-                </div>
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title="Campus Life | Vidya Bharati"
+                allowFullScreen
+              ></iframe>
+              <div className="absolute top-0 left-0 right-0 p-4 bg-gradient-to-b from-black/70 to-transparent pointer-events-none">
+                <p className="text-white text-sm md:text-base font-medium truncate">Campus Insights | Vidya Bharati Excellence</p>
+              </div>
             </div>
           </div>
         </div>
@@ -178,11 +180,11 @@ const Home = () => {
           </div>
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="w-full md:w-1/2">
-              <div className="border-4 border-cyan-200 p-2 rounded-sm shadow-lg overflow-hidden bg-white">
-                <img 
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop" 
+              <div className="border-4 border-cyan-200 p-6 rounded-sm shadow-lg overflow-hidden bg-white flex justify-center">
+                <img
+                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop"
                   alt="Vidya Bharati Secretary"
-                  className="w-full h-[450px] object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                  className="w-[500px] h-[650px]  transition-all duration-500"
                 />
               </div>
             </div>
@@ -197,6 +199,30 @@ const Home = () => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-6 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl font-bold text-slate-700 uppercase tracking-widest">Central Board of Secondary Education</h2>
+            <div className="w-20 h-1 bg-pink-500 mx-auto mt-2"></div>
+          </div>
+          <p className="text-md text-gray-600 font-medium mt-3 px-4 md:px-2 text-justify leading-relaxed max-w-4xl mx-auto"> <b>At VIDAY BHARATI CBSE </b> Schools offers a nationally established CBSE (Central Board of Secondary Education) curriculum across the majority of its schools. The school is affiliated with the Central Board of Secondary Education and students are prepared for the All-India Secondary School
+            Exams (Class X) and the All India Secondary School Certificate Examination (Class XII).</p>
+          <p className="text-md text-gray-600 font-medium mt-3 px-4 md:px-2 text-justify leading-relaxed max-w-4xl mx-auto"> Our seminal approach to education prepares our students to excel in
+            the Board Examinations, making  VIDAY BHARATI CBSE Schools one of the <b> best CBSE schools in India</b>.</p>
+          <p className="text-md text-gray-600 font-medium mt-3 px-4 md:px-2 text-justify leading-relaxed max-w-4xl mx-auto">The graded system of evaluation is the most current in a series of examination and evaluation reforms that CBSE has implemented. Our curriculum's main goal is to modernise
+            teaching-learning techniques by creating paradigms that are helpful to students.</p>
+          <p className="text-md text-gray-600 font-medium mt-3 px-4 md:px-2 text-justify leading-relaxed max-w-4xl mx-auto">Students are urged to explore the connection between diverse disciplines' theoretical and practical concepts at the primary and secondary levels. An interdisciplinary approach dissolves the boundaries of subjects and encourages learning across the curriculum. We have developed a plan where the theme encompasses all curricular areas. Subjects like Math, English, Social Studies, and Science are integrated and taught focusing on a specific issue. With this, we have eliminated the age-old concept of teaching subjects in isolation. This cultivates higher order thinking abilities,
+             encouraging our young geniuses to focus on their critical thinking and problem-solving skills.</p>
+          <p className="text-md text-gray-600 font-medium mt-3 px-4 md:px-2 text-justify leading-relaxed max-w-4xl mx-auto"><b>The CBSE curriculum at VIDAY BHARATI CBSE Schools is based on:</b></p>
+          <ul className="list-disc pl-6 space-y-2 text-gray-700 text-md font-medium mx-auto max-w-4xl mt-2">
+            <li>Integrated Curriculum</li>
+            <li>Interdisciplinary Approach</li>
+            <li>Experiential Learning</li>
+            <li>Research Work</li>
+          </ul>
         </div>
       </section>
 
@@ -216,7 +242,22 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
+    <section className="py-10">
+  <div className="flex flex-col items-center">
 
+    <div className="mb-6 border-b-4 border-pink-500 w-fit">
+      <h2 className="text-3xl font-black uppercase tracking-tight text-slate-800 pb-2 text-center">
+        	Our Mission
+      </h2>
+    </div>
+
+    <p className="text-slate-600 leading-relaxed text-lg text-center max-w-3xl">
+    	To impart value based Quality Education with an analytical approach to enable students to convert
+     acquired knowledge into wisdom which help them to be worthy human beings.
+    </p>
+
+  </div>
+</section>
       {/* --- VISION & MISSION --- */}
       <section className="py-24 px-6 bg-cyan-50">
         <div className="max-w-7xl mx-auto">
@@ -227,7 +268,7 @@ const Home = () => {
                   <h2 className="text-3xl font-black uppercase tracking-tight text-slate-800 pb-2">Vision</h2>
                 </div>
                 <p className="text-slate-600 leading-relaxed text-lg">
-                  To develop a National System of Education which would help to build a generation of young men and women that is committed to Hindutva and infused with patriotic fervor.
+                 	At Vbsk Vilas Institutions, education is a noble instrument with which we mould future generations into responsible citizens and good human beings.
                 </p>
               </motion.div>
 
@@ -236,7 +277,8 @@ const Home = () => {
                   <h2 className="text-3xl font-black uppercase tracking-tight text-slate-800 pb-2">Mission</h2>
                 </div>
                 <p className="text-slate-600 leading-relaxed text-lg">
-                  To provide holistic education that integrates physical, mental, intellectual and spiritual development through the Panchapadi system.
+                 	To provide our students ample opportunities and means to help them imbibe, all into their character that is fair, moral and pious. To impart a strong sense of culture, values and deep knowledge to our students, 
+                 so that each one is looked upon as a role model by the present and following generations.
                 </p>
               </motion.div>
             </div>
@@ -263,14 +305,14 @@ const Home = () => {
       {/* --- CELEBRATIONS --- */}
       <section className="py-24 px-6 bg-white">
         <div className="max-w-7xl mx-auto text-center">
-            <h2 className="text-5xl font-black uppercase tracking-tighter text-slate-800">Celebrations</h2>
-            <p className="text-xl tracking-widest text-pink-400 mt-2 uppercase font-medium">Rooted in Culture</p>
-            <div className="w-24 h-1 bg-yellow-400 mx-auto mt-4 mb-16"></div>
+          <h2 className="text-5xl font-black uppercase tracking-tighter text-slate-800">Celebrations</h2>
+          <p className="text-xl tracking-widest text-pink-400 mt-2 uppercase font-medium">Rooted in Culture</p>
+          <div className="w-24 h-1 bg-yellow-400 mx-auto mt-4 mb-16"></div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
             {celebrations.map((item, index) => (
-              <motion.div 
-                key={index} 
+              <motion.div
+                key={index}
                 className="bg-white border-[3px] border-cyan-100 rounded-sm overflow-hidden shadow-lg hover:border-pink-300 transition-colors"
                 whileHover={{ scale: 1.02 }}
               >
