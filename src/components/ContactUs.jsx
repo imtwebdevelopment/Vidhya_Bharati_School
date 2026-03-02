@@ -246,14 +246,6 @@ const ContactUs = () => {
   <div className="bg-white shadow-md">
     <div className="p-4 bg-slate-50 border-b flex justify-between items-center max-w-7xl mx-auto">
       <span className="font-bold text-slate-700">Location Map</span>
-      <a
-        href="https://maps.google.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-sm text-blue-600 font-bold hover:underline"
-      >
-        Open in Maps
-      </a>
     </div>
 
     <div className="h-96 w-full map-container">
