@@ -194,7 +194,7 @@ const Home = () => {
               </div>
               <p className="font-bold text-slate-900">- Swami Vivekananda</p>
               <div className="text-slate-600 leading-relaxed text-sm md:text-base space-y-4">
-                <p>The <strong>Vidya Bharati Akhil Bharatiya Shiksha Sansthan</strong> is committed to providing a value-based education system that helps in the total development of the child.</p>
+                <p>The <strong>	Vidya Bharati Shikshana Kendra</strong> is committed to providing a value-based education system that helps in the total development of the child.</p>
                 <p>Our institution aims to build a younger generation that is committed to the nation and equipped with modern knowledge rooted in Indian culture.</p>
               </div>
             </div>
@@ -208,15 +208,15 @@ const Home = () => {
             <h2 className="text-2xl font-bold text-slate-700 uppercase tracking-widest">Central Board of Secondary Education</h2>
             <div className="w-20 h-1 bg-pink-500 mx-auto mt-2"></div>
           </div>
-          <p className="text-md text-gray-600 font-medium mt-3 px-4 md:px-2 text-justify leading-relaxed max-w-4xl mx-auto"> <b>At VIDAY BHARATI CBSE </b> Schools offers a nationally established CBSE (Central Board of Secondary Education) curriculum across the majority of its schools. The school is affiliated with the Central Board of Secondary Education and students are prepared for the All-India Secondary School
+          <p className="text-md text-gray-600 font-medium mt-3 px-4 md:px-2 text-justify leading-relaxed max-w-4xl mx-auto"> <b>At VIDYA BHARATI CBSE </b> School offers a nationally established CBSE (Central Board of Secondary Education) curriculum across the majority of its schools. The school is affiliated with the Central Board of Secondary Education and students are prepared for the All-India Secondary School
             Exams (Class X) and the All India Secondary School Certificate Examination (Class XII).</p>
-          <p className="text-md text-gray-600 font-medium mt-3 px-4 md:px-2 text-justify leading-relaxed max-w-4xl mx-auto"> Our seminal approach to education prepares our students to excel in
+          <p className="text-md text-gray-600 font-medium mt-3 px-4 md:px-2 text-justify leading-relaxed max-w-4xl mx-auto">Our holistic/ Our Innovative/ Our Comprehensive approach to education prepares our students to excel in
             the Board Examinations, making  VIDAY BHARATI CBSE Schools one of the <b> best CBSE schools in India</b>.</p>
           <p className="text-md text-gray-600 font-medium mt-3 px-4 md:px-2 text-justify leading-relaxed max-w-4xl mx-auto">The graded system of evaluation is the most current in a series of examination and evaluation reforms that CBSE has implemented. Our curriculum's main goal is to modernise
             teaching-learning techniques by creating paradigms that are helpful to students.</p>
           <p className="text-md text-gray-600 font-medium mt-3 px-4 md:px-2 text-justify leading-relaxed max-w-4xl mx-auto">Students are urged to explore the connection between diverse disciplines' theoretical and practical concepts at the primary and secondary levels. An interdisciplinary approach dissolves the boundaries of subjects and encourages learning across the curriculum. We have developed a plan where the theme encompasses all curricular areas. Subjects like Math, English, Social Studies, and Science are integrated and taught focusing on a specific issue. With this, we have eliminated the age-old concept of teaching subjects in isolation. This cultivates higher order thinking abilities,
              encouraging our young geniuses to focus on their critical thinking and problem-solving skills.</p>
-          <p className="text-md text-gray-600 font-medium mt-3 px-4 md:px-2 text-justify leading-relaxed max-w-4xl mx-auto"><b>The CBSE curriculum at VIDAY BHARATI CBSE Schools is based on:</b></p>
+          <p className="text-md text-gray-600 font-medium mt-3 px-4 md:px-2 text-justify leading-relaxed max-w-4xl mx-auto"><b>The CBSE curriculum at VIDYA BHARATI CBSE School is based on:</b></p>
           <ul className="list-disc pl-6 space-y-2 text-gray-700 text-md font-medium mx-auto max-w-4xl mt-2">
             <li>Integrated Curriculum</li>
             <li>Interdisciplinary Approach</li>
@@ -268,7 +268,7 @@ const Home = () => {
                   <h2 className="text-3xl font-black uppercase tracking-tight text-slate-800 pb-2">Vision</h2>
                 </div>
                 <p className="text-slate-600 leading-relaxed text-lg">
-                 	At Vbsk Vilas Institutions, education is a noble instrument with which we mould future generations into responsible citizens and good human beings.
+                 	At VBSK Institutions, education is a noble instrument with which we mould future generations into responsible citizens and good human beings.
                 </p>
               </motion.div>
 

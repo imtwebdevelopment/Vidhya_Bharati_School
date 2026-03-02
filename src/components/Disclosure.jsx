@@ -383,7 +383,7 @@ const Disclosure = () => {
         <h1 className="text-3xl md:text-4xl font-extrabold text-sky-800 mb-2 border-b-4 border-pink-500 inline-block px-4 pb-1">
           Academic Excellence
         </h1>
-        <p className="text-md text-gray-600 font-medium mt-3 px-4 md:px-2 text-justify leading-relaxed max-w-4xl mx-auto"> At VIDAY BHARATI CBSE Schools, our learners achieve
+        <p className="text-md text-gray-600 font-medium mt-3 px-4 md:px-2 text-justify leading-relaxed max-w-4xl mx-auto"> At VIDYA BHARATI CBSE School, our learners achieve
           amazing things. Recognised as one of the leading school brands in India, our learners enjoy a remarkable range of innovative learning experiences, which inspire and challenge them to be their very best. This includes exclusive collaborations with abroad universities, one of the widest choices of subjects in India, and more than 50+ extra-curricular clubs and activities. Nurtured by our outstanding teachers facilitating your child’s curiosity and igniting their passions – your child will get a holistic education. At VIDAY BHARATI CBSE Schools helps learners carve their own personal and academic pathways to success along with getting remarkable examination results
           that will encourage them to be the best they can be, in all areas of their learning.</p>
       </div>
@@ -392,8 +392,8 @@ const Disclosure = () => {
         <h1 className="text-3xl md:text-4xl font-extrabold text-sky-800 mb-2 border-b-4 border-pink-500 inline-block px-4 pb-1">
           Education beyond Academics
         </h1>
-        <p className="text-md text-gray-600 font-medium mt-3 px-4 md:px-2 text-justify leading-relaxed max-w-4xl mx-auto"> At VIDAY BHARATI CBSE Schools, our learners achieve
-          The Emerald International School (EIS) represents a paradigm shift in Indian education.
+        <p className="text-md text-gray-600 font-medium mt-3 px-4 md:px-2 text-justify leading-relaxed max-w-4xl mx-auto"> At VIDYA BHARATI CBSE School, our learners achieve
+          The Vidya Bharati CBSE School (VBCBSE) represents a paradigm shift in Indian education.
           Inspired by the New Education Policy 2020 (NEP 2020), the school instills competency-based higher order thinking in children from a young age to prepare them for a seamless transition to the best universities, careers armed with life preparedness.
           Get Set To Experience a Difference
           The EIS experience reverberates throughout the campus. This comes to the fore as soon as you enter the portals.
@@ -406,7 +406,7 @@ const Disclosure = () => {
         <h4 className="text-3xl md:text-3xl font-extrabold text-sky-800 mb-2 border-b-4 border-pink-500 inline-block px-4 pb-1">
           Curriculum
         </h4>
-        <p className="text-md text-gray-600 font-medium mt-3 px-4 md:px-2 text-justify leading-relaxed max-w-4xl mx-auto"> At VIDAY BHARATI CBSE Schools, our learners achieve
+        <p className="text-md text-gray-600 font-medium mt-3 px-4 md:px-2 text-justify leading-relaxed max-w-4xl mx-auto"> At VIDYA BHARATI CBSE School, our learners achieve
           Learning is a life skill that goes beyond reading and writing. We ensure the right balance of stimulation and age appropriate learning in every child.
           VBSK emphasises of experiential and exploratory methods of learning.
           Students are encouraged to present their learning outcomes through presentations, role plays, small skits, quiz or impromptu debates.

@@ -89,7 +89,7 @@ function AboutVBSKCBSE() {
           <div className="w-20 h-1 bg-yellow-400 mb-10"></div>
 
           <p className="text-lg text-gray-600 max-w-4xl mb-6 leading-relaxed">
-           VIBGYOR High's journey towards education excellence began in 2004 with an
+         	The Vidya Bharati CBSE School’s journey towards education excellence began in 2014 with an
             ideal mix of academic and corporate professionals who felt the shared need to provide 
             inclusive education. At VIDAY BHARATI CBSE Schools, we challenge our students with a
              unique educational experience which emphasises a seamless blend of academics, sports,
@@ -168,7 +168,7 @@ function AboutVBSKCBSE() {
           <div className="bg-white/10 p-8">
             <h3 className="text-3xl font-extrabold mb-4">Our Vision</h3>
             <p className="text-lg opacity-90 leading-relaxed">
-            "At Vbsk Vilas Institutions, education is a noble instrument with which we mould 
+            "	At VBSK Institution, education is a noble instrument with which we mould 
             future generations into responsible citizens and good human beings"
             </p>
           </div>
