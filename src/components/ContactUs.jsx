@@ -257,8 +257,7 @@ const ContactUs = () => {
     </div>
 
     <div className="h-96 w-full map-container">
-      <iframe
-        src="https://www.google.com/maps/place/Vidya+bharati+state+school/@16.198579,77.3380733,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc9d76afbd796a1:0x4ff7ed96f2029310!8m2!3d16.198579!4d77.3406482!16s%2Fg%2F11sq25dl_d?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3831.4249458737154!2d77.33807327420703!3d16.19857898449985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc9d76afbd796a1%3A0x4ff7ed96f2029310!2sVidya%20bharati%20state%20school!5e0!3m2!1sen!2sin!4v1772447094367!5m2!1sen!2sin" 
         className="w-full h-full border-0"
         allowFullScreen
         loading="lazy"
