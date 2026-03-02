@@ -91,7 +91,7 @@ function AboutVBSKCBSE() {
           <p className="text-lg text-gray-600 max-w-4xl mb-6 leading-relaxed">
          	The Vidya Bharati CBSE School’s journey towards education excellence began in 2014 with an
             ideal mix of academic and corporate professionals who felt the shared need to provide 
-            inclusive education. At VIDAY BHARATI CBSE Schools, we challenge our students with a
+            inclusive education. At VIDYA BHARATI CBSE Schools, we challenge our students with a
              unique educational experience which emphasises a seamless blend of academics, sports,
               performing arts, community and experiential learning programmes. Today we are one of the 
               leading schools in the nation, offering a wide choice of educational streams such as the Council 

@@ -70,7 +70,7 @@ const ContactUs = () => {
         </svg>
       ),
       title: 'Our Campus',
-      detail: 'Yeramaras Camp, Raichur, Karnataka - 584134',
+      detail: 'Yeramaras Camp, Raichur, Karnataka - 584101',
       subDetail: 'Visit us Mon-Sat: 8:30 AM - 4:00 PM'
     },
     { 
@@ -144,22 +144,10 @@ const ContactUs = () => {
               ))}
 
               {/* Mini Map */}
-              <div className="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
-                <div className="p-4 bg-slate-50 border-b flex justify-between items-center">
-                  <span className="font-bold text-slate-700">Location Map</span>
-                  <a href="https://maps.google.com" className="text-xs text-blue-600 font-bold hover:underline">Open in Maps</a>
-                </div>
-                <div className="h-64 bg-slate-200 map-container">
-                    <iframe 
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3821.571408354673!2d77.3619553!3d16.2155694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb999427b3d304b%3A0xc33e14620f4f954b!2sYeramaras%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1700000000000" 
-                      className="w-full h-full border-0"
-                      allowFullScreen="" 
-                      loading="lazy"
-                      title="School Location"
-                    ></iframe>
-                </div>
               </div>
-            </div>
+
+              
+            
 
             {/* Right Column: Contact Form */}
             <div className="lg:col-span-8">
@@ -253,6 +241,32 @@ const ContactUs = () => {
 
           </div>
         </div>
+        {/* Full Width Map */}
+<div className="mt-16 w-full my-2">
+  <div className="bg-white shadow-md">
+    <div className="p-4 bg-slate-50 border-b flex justify-between items-center max-w-7xl mx-auto">
+      <span className="font-bold text-slate-700">Location Map</span>
+      <a
+        href="https://maps.google.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-sm text-blue-600 font-bold hover:underline"
+      >
+        Open in Maps
+      </a>
+    </div>
+
+    <div className="h-96 w-full map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3821.571408354673!2d77.3619553!3d16.2155694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb999427b3d304b%3A0xc33e14620f4f954b!2sYeramaras%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1700000000000"
+        className="w-full h-full border-0"
+        allowFullScreen
+        loading="lazy"
+        title="School Location"
+      ></iframe>
+    </div>
+  </div>
+</div>
       </div>
     </>
   );

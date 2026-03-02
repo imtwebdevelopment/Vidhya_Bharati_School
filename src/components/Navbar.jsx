@@ -146,10 +146,10 @@ const Navbar = () => {
     <Fragment>
       {/* Main Container - fixed position with transform based on scroll */}
       <motion.div 
-        className="w-full fixed top-0 z-50 transition-all duration-300 shadow-xl"
+       className="w-full fixed top-0 z-50 transition-all duration-300 shadow-xl"
         style={{ 
           backgroundColor: brandDarkBlue,
-          transform: isNavSticky ? "translateY(-40px)" : "translateY(0px)"
+       transform: "translateY(0px)"
         }}
       >
         {/* Progress Bar */}
@@ -163,19 +163,24 @@ const Navbar = () => {
         {/* 1. FIRST SUB-NAV - All three nav sections stick together */}
         <div className="w-full py-1 border-b border-white/10 bg-gradient-to-r from-blue-900/50 to-blue-800/50">
           <div className="max-w-7xl mx-auto px-4">
-            <div className="hidden md:flex items-center justify-center w-full space-x-6 text-[10px] font-medium text-white/80 uppercase py-1">
-              {firstSubNavItems.map((item, idx) => (
-                <React.Fragment key={item.label}>
-                  <Link 
-                    to={item.to} 
-                    className={`hover:text-yellow-400 transition-colors whitespace-nowrap ${location.pathname === item.to ? "text-yellow-400 font-bold" : ""}`}
-                  >
-                    {item.label}
-                  </Link>
-                  {idx < firstSubNavItems.length - 1 && <div className="w-px h-2 bg-white/20" />}
-                </React.Fragment>
-              ))}
-            </div>
+         {/* FIRST SUB NAV - Always Fixed */}
+
+  <div className="max-w-7xl mx-auto px-4">
+    <div className="hidden md:flex items-center justify-center w-full space-x-6 text-[10px] font-medium text-white/80 uppercase py-1">
+      {firstSubNavItems.map((item, idx) => (
+        <React.Fragment key={item.label}>
+          <Link 
+            to={item.to} 
+            className={`hover:text-yellow-400 transition-colors whitespace-nowrap ${location.pathname === item.to ? "text-yellow-400 font-bold" : ""}`}
+          >
+            {item.label}
+          </Link>
+          {idx < firstSubNavItems.length - 1 && <div className="w-px h-2 bg-white/20" />}
+        </React.Fragment>
+      ))}
+    </div>
+  </div>
+</div>
             
             {/* Mobile version of first sub-nav in menu */}
             <div className="md:hidden flex items-center justify-center w-full space-x-4 text-[9px] font-medium text-white/80 uppercase py-1 overflow-x-auto">
@@ -192,7 +197,7 @@ const Navbar = () => {
               ))}
             </div>
           </div>
-        </div>
+        
 
         {/* 2. SECOND SUB-NAV (BRANDING) */}
         <div className="w-full bg-black/20 backdrop-blur-md">
@@ -219,7 +224,7 @@ const Navbar = () => {
               </Link>
 
               {/* Desktop Contact Info */}
-              <div className="hidden lg:flex items-center gap-5 text-white">
+              <div className="hidden lg:flex items-center  gap-5 text-white">
                 <div className="flex items-center gap-2">
                   <div className="p-1.5 bg-white/10 rounded-full"><PhoneIcon /></div>
                   <div>

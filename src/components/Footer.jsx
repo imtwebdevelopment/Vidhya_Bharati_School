@@ -89,15 +89,16 @@ const Footer = () => {
 
           {/* 3. Contact Info & Map */}
           <motion.div variants={fadeInUp} className="lg:col-span-1">
-            <h3 className="text-lg md:text-xl font-extrabold mb-4 text-pink-400 border-b-2 border-yellow-400 pb-1 inline-block">Reach Us</h3>
+            <h3 className="text-lg md:text-xl font-extrabold mb-4 text-pink-400 border-b-2 border-yellow-400 pb-1 inline-block">Contact Us</h3>
             <div className="space-y-3 md:space-y-4">
               {/* Address */}
               <div className="flex items-start space-x-3">
                 <svg className="w-5 h-5 text-yellow-400 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                 </svg>
-                <span className="text-gray-300 text-sm break-words">Yeramaras Camp, RCR, Raichur Pin - 584 101, Karnataka State.</span>
+                <span className="text-gray-300 text-sm break-words">Yeramaras Camp, RCR,</span>
               </div>
+                <span className="text-gray-300 text-sm break-words ml-6">Raichur, Karnataka, 584 101</span>
                
 
               {/* Phone */}
