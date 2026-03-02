@@ -258,7 +258,7 @@ const ContactUs = () => {
 
     <div className="h-96 w-full map-container">
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3821.571408354673!2d77.3619553!3d16.2155694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb999427b3d304b%3A0xc33e14620f4f954b!2sYeramaras%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1700000000000"
+        src="https://www.google.com/maps/place/Vidya+bharati+state+school/@16.198579,77.3380733,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc9d76afbd796a1:0x4ff7ed96f2029310!8m2!3d16.198579!4d77.3406482!16s%2Fg%2F11sq25dl_d?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
         className="w-full h-full border-0"
         allowFullScreen
         loading="lazy"
