@@ -83,7 +83,7 @@ const Footer = () => {
               <li><a href="/contact" className="text-gray-300 hover:text-yellow-400 transition-colors text-sm md:text-base flex items-center">
                 <span className="text-yellow-400 mr-2 text-sm">&rsaquo;</span>CONTACT</a></li>
               <li><a href="/news" className="text-gray-300 hover:text-yellow-400 transition-colors text-sm md:text-base flex items-center">
-                <span className="text-yellow-400 mr-2 text-sm">&rsaquo;</span>News & Events</a></li>
+                <span className="text-yellow-400 mr-2 text-sm">&rsaquo;</span>NEWS & EVENTS</a></li>
             </ul>
           </motion.div>
 
