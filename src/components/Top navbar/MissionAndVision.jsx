@@ -57,7 +57,7 @@ const MissionAndVision = () => {
               >
                 <h2 className="text-3xl font-black uppercase tracking-tight text-slate-800 mb-4">Vision</h2>
                 <p className="text-slate-600 leading-relaxed text-lg ">
-                  "At Vbsk Vilas Institutions, education is a noble instrument with which we mould future generations into responsible citizens and good human beings".
+                  "At VBSK Institutions, education is a noble instrument with which we mould future generations into responsible citizens and good human beings".
                 </p>
               </motion.div>
 
