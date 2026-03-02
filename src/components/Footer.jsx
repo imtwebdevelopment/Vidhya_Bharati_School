@@ -124,9 +124,7 @@ const Footer = () => {
                 whileHover={{ scale: 1.05 }}
                 className="w-full h-32 rounded-lg overflow-hidden border-2 border-sky-700 shadow-lg cursor-pointer"
               >
-                <iframe 
-                  title="Vidya Bharati CBSE School Location"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3826.5413348123!2d77.348633!3d16.205316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb9900000000000%3A0x0!2zMTbCsDEyJzE5LjEiTiA3N8KwMjAnNTUuMSJF!5e0!3m2!1sen!2sin!4v1710000000000"
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3831.4249458737063!2d77.33807327420703!3d16.19857898449985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc9d76afbd796a1%3A0x4ff7ed96f2029310!2sVidya%20bharati%20state%20school!5e0!3m2!1sen!2sus!4v1772447342703!5m2!1sen!2sus"
                   className="w-full h-full border-0"
                   allowFullScreen=""
                   loading="lazy"
