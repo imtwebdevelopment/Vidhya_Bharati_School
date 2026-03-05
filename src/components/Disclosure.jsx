@@ -92,7 +92,7 @@ const Disclosure = () => {
     { slNo: 5, information: 'TGT', details: '03' },
     { slNo: 6, information: 'PTI', details: 'Mr. Pranesh (B.Ped)' },
     { slNo: 7, information: 'Librarian', details: 'Bee.Bee. Amina (B.A, B.ed, D.Lib)' },
-    { slNo: 8, information: 'Teachers Section Ratio', details: '1:1.5' },
+    { slNo: 8, information: 'Teachers Section Ratio', details: '1:15' },
     { slNo: 9, information: 'Details of Special Educators', details: 'Mrs. Shaheen Sultana (M.A)' },
     { slNo: 10, information: 'Details of Counseling and Wellness Teacher', details: 'Mrs. Ruksana Begum (M.A., M.ed)' },
     { slNo: 11, information: 'Computer Teacher', details: 'Mrs. Shayla (BCA)' }
@@ -384,7 +384,8 @@ const Disclosure = () => {
           Academic Excellence
         </h1>
         <p className="text-md text-gray-600 font-medium mt-3 px-4 md:px-2 text-justify leading-relaxed max-w-4xl mx-auto"> At VIDYA BHARATI CBSE School, our learners achieve
-          amazing things. Recognised as one of the leading school brands in India, our learners enjoy a remarkable range of innovative learning experiences, which inspire and challenge them to be their very best. This includes exclusive collaborations with abroad universities, one of the widest choices of subjects in India, and more than 50+ extra-curricular clubs and activities. Nurtured by our outstanding teachers facilitating your child’s curiosity and igniting their passions – your child will get a holistic education. At VIDAY BHARATI CBSE Schools helps learners carve their own personal and academic pathways to success along with getting remarkable examination results
+          amazing things. Recognised as one of the leading school brands in India, our learners enjoy a remarkable range of innovative learning experiences, which inspire and challenge them to be their very best.
+           This includes exclusive collaborations with abroad universities, one of the widest choices of subjects in India, and more than 50+ extra-curricular clubs and activities. Nurtured by our outstanding teachers facilitating your child’s curiosity and igniting their passions – your child will get a holistic education. At	Vidya Bharati CBSE School helps learners carve their own personal and academic pathways to success along with getting remarkable examination results
           that will encourage them to be the best they can be, in all areas of their learning.</p>
       </div>
 

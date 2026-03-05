@@ -210,7 +210,7 @@ const Home = () => {
           </div>
           <p className="text-md text-gray-600 font-medium mt-3 px-4 md:px-2 text-justify leading-relaxed max-w-4xl mx-auto"> <b>At VIDYA BHARATI CBSE </b> School offers a nationally established CBSE (Central Board of Secondary Education) curriculum across the majority of its schools. The school is affiliated with the Central Board of Secondary Education and students are prepared for the All-India Secondary School
             Exams (Class X) and the All India Secondary School Certificate Examination (Class XII).</p>
-          <p className="text-md text-gray-600 font-medium mt-3 px-4 md:px-2 text-justify leading-relaxed max-w-4xl mx-auto">Our holistic/ Our Innovative/ Our Comprehensive approach to education prepares our students to excel in
+          <p className="text-md text-gray-600 font-medium mt-3 px-4 md:px-2 text-justify leading-relaxed max-w-4xl mx-auto">Our holistic approach to education prepares our students to excel in
             the Board Examinations, making  VIDYA BHARATI CBSE Schools one of the <b> best CBSE schools in India</b>.</p>
           <p className="text-md text-gray-600 font-medium mt-3 px-4 md:px-2 text-justify leading-relaxed max-w-4xl mx-auto">The graded system of evaluation is the most current in a series of examination and evaluation reforms that CBSE has implemented. Our curriculum's main goal is to modernise
             teaching-learning techniques by creating paradigms that are helpful to students.</p>

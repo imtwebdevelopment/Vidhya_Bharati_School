@@ -195,11 +195,11 @@ const OurStaff = () => {
             {/* Stats (Updated color: Pink/Blue) */}
             <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
               <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ delay: 0.2 }} className="text-center p-4 bg-white rounded-xl border border-gray-200 shadow-sm">
-                <div className="text-2xl font-bold text-pink-600">12+</div>
+                <div className="text-2xl font-bold text-pink-600">80+</div>
                 <div className="text-sm text-gray-600">Staff Members</div>
               </motion.div>
               <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ delay: 0.3 }} className="text-center p-4 bg-white rounded-xl border border-gray-200 shadow-sm">
-                <div className="text-2xl font-bold text-blue-600">80+</div>
+                <div className="text-2xl font-bold text-blue-600">12+</div>
                 <div className="text-sm text-gray-600">Years Experience</div>
               </motion.div>
               <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ delay: 0.4 }} className="text-center p-4 bg-white rounded-xl border border-gray-200 shadow-sm">
