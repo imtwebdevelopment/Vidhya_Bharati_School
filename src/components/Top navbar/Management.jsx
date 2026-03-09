@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import TeachersManagement from "../TeachersData";
+import StaffPage from "../TeachersData";
 
 // People Data
 const people = [
@@ -100,6 +102,8 @@ const Management = () => {
           </div>
         </div>
       </section>
+
+    <StaffPage/>
 
       {/* GOVERNING BODY */}
       <section className="py-12 px-4 bg-white">

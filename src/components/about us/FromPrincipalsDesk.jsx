@@ -75,9 +75,9 @@ const FromPrincipalsDesk = () => {
 
                   {/* ✅ Dummy Image Only */}
                   <img
-                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop"
+                    src="/principle.jpeg"
                     alt="Principal"
-                    className="relative w-full h-[400px] object-cover rounded-3xl border-4 border-white shadow-2xl"
+                    className="relative w-full h-[500px] object-cover rounded-3xl border-4 border-white shadow-2xl"
                   />
 
                   <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur px-6 py-3 rounded-2xl shadow-lg border border-rose-100">

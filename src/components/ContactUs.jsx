@@ -70,7 +70,7 @@ const ContactUs = () => {
         </svg>
       ),
       title: 'Our Campus',
-      detail: 'MM Colony,Rampur, Raichur, Karnataka - 584101',
+      detail: 'SriRam Nagar, Station Road, Raichur, Karnataka - 584101',
       subDetail: 'Visit us Mon-Sat: 8:30 AM - 4:00 PM'
     },
     { 
