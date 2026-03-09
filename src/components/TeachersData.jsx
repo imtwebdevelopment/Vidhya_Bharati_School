@@ -3,23 +3,7 @@ import React, { useState } from "react";
 
 /* ARRAYS (UNCHANGED) */
 
-const management = [
-{
-name: "Smt.Katyayani Hegdekatte",
-qualification: "M.A., B.Ed",
-designation: "Principal"
-},
-{
-name: "Sri. Veeresh Murari",
-qualification: "M.Sc., M.Phil, M.L.I.Sc, B.Ed",
-designation: "Manager"
-},
-{
-name: "Smt. Kavya",
-qualification: "M.Sc., B.Ed",
-designation: "Vice Principal"
-}
-];
+
 
 const teachingStaff = [
 {id:1,name:"Smt. Tanuja",qualification:"M.A., B.Ed",designation:"TGT"},
@@ -88,6 +72,10 @@ const teachingStaff = [
 {id:57,name:"Sri. Srinath Hiremath",qualification:"M.Sc, B.Ed",designation:"TGT"},
 {id:58,name:"Sri. Anand Alur",qualification:"M.C.A, B.A (Sanskrit)",designation:"Sanskrit Teacher"}
 ];
+
+const maleIcon = "https://www.creativefabrica.com/wp-content/uploads/2022/06/02/Client-employee-business-man-icon-Graphics-31597820-1.jpg";
+
+const femaleIcon = "/female.jpg";
 
 const nonTeachingStaff = [
 {
@@ -185,41 +173,6 @@ return (
 <section className="py-16 bg-gray-50">
 <div className="max-w-6xl mx-auto px-6">
 
-{/* MANAGEMENT */}
-
-<h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-4">
-Teachers Details
-</h2>
-
-<div className="grid md:grid-cols-3 gap-6 mb-12">
-
-{management.map((person,index)=>(
-<div key={index} className="bg-white p-6 rounded-xl shadow text-center">
-
-<div className="w-20 h-20 mx-auto rounded-full bg-indigo-100 flex items-center justify-center text-2xl mb-4">
-<img  className="w-full h-full object-cover" src="https://www.creativefabrica.com/wp-content/uploads/2022/06/02/Client-employee-business-man-icon-Graphics-31597820-1.jpg" alt="" />
-</div>
-
-<h3 className="font-semibold text-lg">{person.name}</h3>
-
-<p className="text-gray-500 text-sm">{person.qualification}</p>
-
-<p className="text-indigo-600 text-sm font-medium">
-{person.designation}
-</p>
-
-<button
-onClick={()=>setSelectedStaff(person)}
-className="mt-3 bg-indigo-600 text-white px-4 py-1 rounded text-sm"
->
-View Details
-</button>
-
-</div>
-))}
-
-</div>
-
 {/* BUTTONS */}
 
 <div className="flex justify-center gap-6 mb-10">
@@ -285,7 +238,15 @@ className="bg-gray-50 border rounded-lg p-4 flex gap-4"
 >
 
 <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center">
-<img className="w-full h-full object-cover" src="https://www.creativefabrica.com/wp-content/uploads/2022/06/02/Client-employee-business-man-icon-Graphics-31597820-1.jpg" alt="" />
+<img
+className="w-full h-full object-cover"
+src={
+staff.name.startsWith("Smt.") || staff.name.startsWith("Miss")
+? femaleIcon
+: maleIcon
+}
+alt={staff.name}
+/>
 </div>
 
 <div>

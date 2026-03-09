@@ -4,12 +4,9 @@ import StaffPage from "../TeachersData";
 
 // People Data
 const people = [
-  { name: "Sri. Ramesh Kulkarni", role: "Chairman", color: "sky" },
+  { name: "Smt.Katyayani Hegdekatte", role: "Principal", color: "sky" },
   { name: "Smt. Anitha Desai", role: "Secretary", color: "pink" },
   { name: "Mr. Harish Rao", role: "Treasurer", color: "amber" },
-  { name: "Mrs. Kavya Patil", role: "Principal", color: "emerald" },
-  { name: "Mr. Nitin Shetty", role: "Vice Principal", color: "blue" },
-  { name: "Mrs. Pooja Rao", role: "Academic Coordinator", color: "purple" },
 ];
 
 const badges = [
@@ -27,36 +24,60 @@ const timeline = [
   { year: "2025", title: "Future Vision", text: "Planning new campus with better facilities." },
 ];
 
+const management = [
+  {
+    name: "Smt.Katyayani Hegdekatte",
+    qualification: "M.A., B.Ed",
+    designation: "Principal",
+    color: "sky",
+    image: "/female.jpg"
+  },
+  {
+    name: "Sri. Veeresh Murari",
+    qualification: "M.Sc., M.Phil, M.L.I.Sc, B.Ed",
+    designation: "Manager",
+    color: "pink",
+    image: "https://www.creativefabrica.com/wp-content/uploads/2022/06/02/Client-employee-business-man-icon-Graphics-31597820-1.jpg"
+  },
+  {
+    name: "Smt. Kavya",
+    qualification: "M.Sc., B.Ed",
+    designation: "Vice Principal",
+    color: "amber",
+    image: "/female.jpg"
+  }
+];
+
 // Color Schemes
 const badgeColors = {
-  pink: { 
-    bg: "bg-pink-100", 
-    text: "text-pink-800", 
+  pink: {
+    bg: "bg-pink-100",
+    text: "text-pink-800",
     border: "border-pink-200"
   },
-  sky: { 
-    bg: "bg-blue-100", 
-    text: "text-blue-800", 
+  sky: {
+    bg: "bg-blue-100",
+    text: "text-blue-800",
     border: "border-blue-200"
   },
-  amber: { 
-    bg: "bg-yellow-100", 
-    text: "text-yellow-800", 
+  amber: {
+    bg: "bg-yellow-100",
+    text: "text-yellow-800",
     border: "border-yellow-200"
   },
-  emerald: { 
-    bg: "bg-green-100", 
-    text: "text-green-800", 
+  emerald: {
+    bg: "bg-green-100",
+    text: "text-green-800",
     border: "border-green-200"
   },
-  blue: { 
-    bg: "bg-blue-100", 
-    text: "text-blue-800", 
+  blue: {
+    bg: "bg-blue-100",
+    text: "text-blue-800",
     border: "border-blue-200"
   },
-  purple: { 
-    bg: "bg-purple-100", 
-    text: "text-purple-800", 
+  purple: {
+    bg: "bg-purple-100",
+    text: "text-purple-800",
     border: "border-purple-200"
   },
 };
@@ -73,11 +94,11 @@ const Management = () => {
             <div className="inline-block px-4 py-2 rounded-full bg-pink-500 text-white text-sm font-bold mb-6">
               Management & Leadership
             </div>
-            
+
             <h1 className="mt-4 text-4xl md:text-5xl font-bold text-gray-900">
               Guiding <span className="text-pink-600">Vision</span>
             </h1>
-            
+
             <p className="mt-6 text-lg text-gray-600 max-w-3xl mx-auto">
               Meet the leadership of <span className="font-bold">VIDYA BHARATI ENGLISH MEDIUM PRIMARY SCHOOL (CBSE), Raichur</span>,
               committed to academic excellence and student development.
@@ -103,7 +124,7 @@ const Management = () => {
         </div>
       </section>
 
-    <StaffPage/>
+     
 
       {/* GOVERNING BODY */}
       <section className="py-12 px-4 bg-white">
@@ -117,49 +138,46 @@ const Management = () => {
 
           {/* People Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {people.map((person, index) => {
+
+            {management.map((person, index) => {
+
               const colors = badgeColors[person.color];
+
               return (
+
                 <div
-                  key={person.name}
-                  className={`rounded-2xl border ${colors.border} ${colors.bg} p-6`}
-                  onMouseEnter={() => setActivePerson(index)}
-                  onMouseLeave={() => setActivePerson(null)}
+                  key={index}
+                  className={`rounded-2xl border ${colors.border} ${colors.bg} p-6 text-center hover:shadow-lg transition`}
                 >
-                  <div className="flex items-start justify-between mb-4">
-                    <div>
-                      <h3 className="text-xl font-bold text-gray-900">{person.name}</h3>
-                      <div className="px-3 py-1 rounded-full bg-white/80 text-sm font-semibold inline-block mt-2">
-                        {person.role}
-                      </div>
-                    </div>
-                    <div className="text-2xl">
-                      ⭐
-                    </div>
+
+                  <div className="w-24 h-24 mx-auto rounded-full overflow-hidden border-4 border-white shadow mb-4">
+                    <img
+                      src={person.image}
+                      alt={person.name}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  
-                  <p className="text-gray-600 mb-4">
-                    Leads with integrity and focuses on academic and co-scholastic growth.
+
+                  <h3 className="text-lg font-bold text-gray-900">
+                    {person.name}
+                  </h3>
+
+                  <p className="text-indigo-600 font-semibold mt-1">
+                    {person.designation}
                   </p>
-                  
-                  <div className="flex justify-between text-sm">
-                    <div className="text-center">
-                      <div className="font-bold text-gray-900">10+</div>
-                      <div className="text-gray-500">Years</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="font-bold text-gray-900">100+</div>
-                      <div className="text-gray-500">Students</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="font-bold text-gray-900">50+</div>
-                      <div className="text-gray-500">Programs</div>
-                    </div>
-                  </div>
+
+                  <p className="text-gray-600 text-sm mt-2">
+                    {person.qualification}
+                  </p>
+
                 </div>
+
               );
+
             })}
+
           </div>
+           <StaffPage />
         </div>
       </section>
 
@@ -180,13 +198,13 @@ const Management = () => {
                   </span>
                 </h2>
               </div>
-              
+
               <p className="text-lg text-gray-600">
                 We believe in <span className="font-bold">Value-based Education</span>,{" "}
                 <span className="font-bold">Activity-led Learning</span>, and constant{" "}
                 <span className="font-bold">Teacher Development</span>.
               </p>
-              
+
               <ul className="space-y-4">
                 {[
                   { text: 'Transparent governance and parent communication', icon: '💬' },
@@ -204,31 +222,31 @@ const Management = () => {
             {/* Philosophy Cards */}
             <div className="grid grid-cols-2 gap-4">
               {[
-                { 
-                  title: "Academics", 
-                  sub: "NEP-aligned pedagogy", 
-                  color: "sky", 
+                {
+                  title: "Academics",
+                  sub: "NEP-aligned pedagogy",
+                  color: "sky",
                   icon: "📚",
                   stat: "95%"
                 },
-                { 
-                  title: "Safety", 
-                  sub: "Safe campus & support", 
-                  color: "pink", 
+                {
+                  title: "Safety",
+                  sub: "Safe campus & support",
+                  color: "pink",
                   icon: "🛡️",
                   stat: "24/7"
                 },
-                { 
-                  title: "Teacher Training", 
-                  sub: "Workshops and learning", 
-                  color: "amber", 
+                {
+                  title: "Teacher Training",
+                  sub: "Workshops and learning",
+                  color: "amber",
                   icon: "👨‍🏫",
                   stat: "50+"
                 },
-                { 
-                  title: "Clubs", 
-                  sub: "Leadership & teamwork", 
-                  color: "emerald", 
+                {
+                  title: "Clubs",
+                  sub: "Leadership & teamwork",
+                  color: "emerald",
                   icon: "🏆",
                   stat: "20+"
                 },
@@ -246,7 +264,7 @@ const Management = () => {
                       </div>
                       <div className="text-2xl">{card.icon}</div>
                     </div>
-                    
+
                     <div className="mt-4 text-xl font-bold text-gray-900">
                       {card.stat}
                     </div>
@@ -277,7 +295,7 @@ const Management = () => {
                     {item.year}
                   </div>
                 </div>
-                
+
                 <div className="bg-gray-50 rounded-xl p-6 flex-1">
                   <h3 className="text-xl font-bold text-gray-900">{item.title}</h3>
                   <p className="text-gray-600 mt-2">{item.text}</p>
@@ -301,7 +319,7 @@ const Management = () => {
                 Your feedback helps us grow better.
               </p>
             </div>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <a
                 href="tel:+918532221980"
@@ -309,7 +327,7 @@ const Management = () => {
               >
                 Call +91 8532-221980
               </a>
-              
+
               <a
                 href="mailto:vbskcbse2014@gmail.com"
                 className="px-8 py-4 rounded-full bg-gray-800 text-white font-bold text-lg hover:bg-gray-900"
@@ -317,7 +335,7 @@ const Management = () => {
                 Email Us
               </a>
             </div>
-            
+
             <div className="mt-8 text-center text-gray-500 text-sm">
               <p>📍 Raichur, Karnataka | ⏰ Mon-Sat: 8:00 AM - 5:00 PM</p>
             </div>
