@@ -40,6 +40,7 @@ import SchoolLifeActivities from "./components/Top navbar/SchoolLifeActivities";
 import History from "./components/Top navbar/History";
 import OurStaff from "./components/Top navbar/OurStaff";
 import Accreditations from "./components/Top navbar/Accreditations";
+import PublicDisclosure from "./components/Top navbar/PublicDisclosure";
 
 // Scroll to top on route change
 function ScrollToTop() {
@@ -84,6 +85,7 @@ const App = () => {
             <Route path="/history" element={<History />} />
             <Route path="/our-staff" element={<OurStaff />} />
             <Route path="/accreditations" element={<Accreditations />} />
+            <Route path="/public" element={<PublicDisclosure/>}/>
 
 
 
