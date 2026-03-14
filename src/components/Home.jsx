@@ -9,8 +9,7 @@ import {
 import banner1 from "../assets/school banner1.jpeg"
 import banner2 from "../assets/school banner2.jpg"
 //life images 
-import cultural from "../assets/cultural.png"
-import sports from "../assets/sports.png"
+
 import life1 from "../assets/Life image1.jpeg"
 import life2 from "../assets/Life image2.jpg"
 import life3 from "../assets/Life image3.jpg"
@@ -72,12 +71,12 @@ const Home = () => {
     { letter: 'T', word: 'Team Spirit', color: 'bg-[#009688]' },
   ];
 
-  const celebrations = [
-    { title: "Annual Sports Meet", thumbnail: sports },
-    { title: "Matru Pooja", thumbnail: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=600&q=80" },
-    { title: "Saraswati Vandana", thumbnail: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&q=80" },
-    { title: "Cultural Fest", thumbnail: cultural }
-  ];
+const celebrations = [
+  { title: "Annual Prize Distribution", videoId: "b-YdXPz8zHk" },
+  { title: "Republic Day Celebration", videoId: "a2bK7_tFwWI" },
+  { title: "FIRELESS COOKING", videoId: "29D44JwaTuA" },
+   { title: "Maths Day Celebration", videoId: "X8nOprM2NDc" }
+];
 
   const testimonials = [
     {
@@ -142,65 +141,10 @@ const Home = () => {
       </section>
 
       {/* --- PARIKSHA PE CHARCHA VIDEOS --- */}
-      <section className="py-16 px-6 bg-cyan-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="relative group overflow-hidden rounded-lg shadow-2xl bg-black aspect-video">
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                title="Pariksha Pe Charcha | Vidya Bharati"
-                allowFullScreen
-              ></iframe>
-              <div className="absolute top-0 left-0 right-0 p-4 bg-gradient-to-b from-black/70 to-transparent pointer-events-none">
-                <p className="text-white text-sm md:text-base font-medium truncate">Pariksha Pe Charcha | Vidya Bharati School</p>
-              </div>
-            </div>
-            <div className="relative group overflow-hidden rounded-lg shadow-2xl bg-black aspect-video">
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                title="Campus Life | Vidya Bharati"
-                allowFullScreen
-              ></iframe>
-              <div className="absolute top-0 left-0 right-0 p-4 bg-gradient-to-b from-black/70 to-transparent pointer-events-none">
-                <p className="text-white text-sm md:text-base font-medium truncate">Campus Insights | Vidya Bharati Excellence</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    
 
       {/* --- SECRETARY'S MESSAGE --- */}
-      <section className="py-20 px-6 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl font-bold text-slate-700 uppercase tracking-widest">From Secretary's Desk</h2>
-            <div className="w-20 h-1 bg-pink-500 mx-auto mt-2"></div>
-          </div>
-          <div className="flex flex-col md:flex-row items-center gap-12">
-            <div className="w-full md:w-1/2">
-              <div className="border-4 border-cyan-200 p-6 rounded-sm shadow-lg overflow-hidden bg-white flex justify-center">
-                <img
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop"
-                  alt="Vidya Bharati Secretary"
-                  className="w-[500px] h-[650px]  transition-all duration-500"
-                />
-              </div>
-            </div>
-            <div className="w-full md:w-1/2 space-y-6">
-              <div className="font-bold text-slate-800 space-y-1 italic text-lg leading-relaxed">
-                <p>"Education is the manifestation of perfection already in man."</p>
-              </div>
-              <p className="font-bold text-slate-900">- Swami Vivekananda</p>
-              <div className="text-slate-600 leading-relaxed text-sm md:text-base space-y-4">
-                <p>The <strong>	Vidya Bharati Shikshana Kendra</strong> is committed to providing a value-based education system that helps in the total development of the child.</p>
-                <p>Our institution aims to build a younger generation that is committed to the nation and equipped with modern knowledge rooted in Indian culture.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    
 
       <section className="py-20 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
@@ -309,27 +253,41 @@ const Home = () => {
           <p className="text-xl tracking-widest text-pink-400 mt-2 uppercase font-medium">Rooted in Culture</p>
           <div className="w-24 h-1 bg-yellow-400 mx-auto mt-4 mb-16"></div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-            {celebrations.map((item, index) => (
-              <motion.div
-                key={index}
-                className="bg-white border-[3px] border-cyan-100 rounded-sm overflow-hidden shadow-lg hover:border-pink-300 transition-colors"
-                whileHover={{ scale: 1.02 }}
-              >
-                <div className="relative aspect-video bg-black group cursor-pointer">
-                  <img src={item.thumbnail} className="w-full h-full object-cover opacity-80" alt={item.title} />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center shadow-2xl">
-                      <Play fill="white" className="text-white ml-1" size={24} />
-                    </div>
-                  </div>
-                </div>
-                <div className="p-6 text-center border-t border-slate-100">
-                  <h3 className="text-lg font-medium text-slate-700">{item.title}</h3>
-                </div>
-              </motion.div>
-            ))}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+  {celebrations.map((item, index) => (
+    <motion.div
+      key={index}
+      className="bg-white border-[3px] border-cyan-100 rounded-sm overflow-hidden shadow-lg hover:border-pink-300 transition-colors"
+      whileHover={{ scale: 1.02 }}
+    >
+
+      <a
+        href={`https://www.youtube.com/watch?v=${item.videoId}`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div className="relative aspect-video bg-black group cursor-pointer">
+          <img
+            src={`https://img.youtube.com/vi/${item.videoId}/hqdefault.jpg`}
+            className="w-full h-full object-cover opacity-80"
+            alt={item.title}
+          />
+
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center shadow-2xl">
+              <Play fill="white" className="text-white ml-1" size={24} />
+            </div>
           </div>
+        </div>
+      </a>
+
+      <div className="p-6 text-center border-t border-slate-100">
+        <h3 className="text-lg font-medium text-slate-700">{item.title}</h3>
+      </div>
+
+    </motion.div>
+  ))}
+</div>
         </div>
       </section>
 

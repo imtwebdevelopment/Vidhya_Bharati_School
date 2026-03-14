@@ -1,16 +1,14 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 // Assume these files are in your assets folder
-import pdfFile from '../assets/newadd.pdf';
+
 
 
 // --- Animated Icon for Load/View Details --
 
 const Disclosure = () => {
  
-  const [showPdfModal, setShowPdfModal] = useState(false);
-  const [showImageModal, setShowImageModal] = useState(false);
-  const [selectedImage, setSelectedImage] = useState(null);
+  
 
   // Main component return with initial page animation
   return (
@@ -129,101 +127,7 @@ const Disclosure = () => {
 
     
       {/* --- PDF Modal --- */}
-      <AnimatePresence>
-        {showPdfModal && (
-          <motion.div
-            className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 p-4"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          >
-            <motion.div
-              className="bg-white rounded-xl shadow-2xl w-full max-w-6xl h-full max-h-[90vh] flex flex-col"
-              initial={{ scale: 0.9, y: 50 }}
-              animate={{ scale: 1, y: 0 }}
-              exit={{ scale: 0.9, y: 50 }}
-              transition={{ type: "spring", stiffness: 100, damping: 15 }}
-            >
-              <div className="flex items-center justify-between p-4 border-b-2 border-pink-500 bg-sky-100 rounded-t-xl">
-                <h3 className="text-xl font-bold text-sky-800">PDF Document Viewer</h3>
-                <button
-                  onClick={() => setShowPdfModal(false)}
-                  className="p-1 bg-pink-500 text-white rounded-full hover:bg-pink-600 transition-colors shadow-md"
-                >
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              </div>
-              <div className="flex-1 p-4">
-                <iframe
-                  src={pdfFile}
-                  className="w-full h-full border-4 border-sky-300 rounded-lg shadow-inner"
-                  title="PDF Document"
-                />
-              </div>
-              <div className="flex items-center justify-end p-4 border-t border-gray-200">
-                <button
-                  onClick={() => setShowPdfModal(false)}
-                  className="px-6 py-2 bg-pink-500 text-white font-semibold rounded-full hover:bg-pink-600 transition-colors shadow-lg"
-                >
-                  Close
-                </button>
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* --- Image Modal --- */}
-      <AnimatePresence>
-        {showImageModal && selectedImage && (
-          <motion.div
-            className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 p-4"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          >
-            <motion.div
-              className="bg-white rounded-xl shadow-2xl w-full max-w-5xl h-full max-h-[95vh] flex flex-col"
-              initial={{ scale: 0.9, rotate: 5 }}
-              animate={{ scale: 1, rotate: 0 }}
-              exit={{ scale: 0.9, rotate: -5 }}
-              transition={{ type: "spring", stiffness: 100, damping: 15 }}
-            >
-              <div className="flex items-center justify-between p-3 border-b-2 border-pink-500 bg-sky-100 rounded-t-xl flex-shrink-0">
-                <h3 className="text-xl font-bold text-sky-800">Document Image Viewer</h3>
-                <button
-                  onClick={() => setShowImageModal(false)}
-                  className="p-1 bg-pink-500 text-white rounded-full hover:bg-pink-600 transition-colors shadow-md"
-                >
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              </div>
-              <div className="flex-1 p-4 flex items-center justify-center overflow-hidden bg-gray-100">
-                <motion.img
-                  src={selectedImage}
-                  alt="Document"
-                  className="max-w-full max-h-full object-contain w-auto h-auto rounded-lg shadow-xl border-4 border-yellow-400"
-                  initial={{ scale: 0.8 }}
-                  animate={{ scale: 1 }}
-                  transition={{ duration: 0.4 }}
-                />
-              </div>
-              <div className="flex items-center justify-end p-3 border-t border-gray-200 flex-shrink-0">
-                <button
-                  onClick={() => setShowImageModal(false)}
-                  className="px-6 py-2 bg-pink-500 text-white font-semibold rounded-full hover:bg-pink-600 transition-colors shadow-lg"
-                >
-                  Close
-                </button>
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+   
     </motion.div>
   );
 };

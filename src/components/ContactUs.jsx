@@ -81,7 +81,7 @@ const ContactUs = () => {
       ),
       title: 'Phone Support',
       detail: '+91 8532-221980',
-      subDetail: 'Admissions: +91 8532-221981'
+      subDetail: 'Admissions: +91 8532-221980'
     },
     { 
       icon: (

@@ -62,7 +62,7 @@ const Navbar = () => {
     { label: "History", to: "/history" },
     { label: "Our Staff", to: "/our-staff" },
     { label: "Accreditations", to: "/accreditations" },
-    {label:"Public Disclosure",to:"/public"}
+    {label:"Mandatory Disclosure",to:"/public"}
   ];
 
   const mainNavItems = [
