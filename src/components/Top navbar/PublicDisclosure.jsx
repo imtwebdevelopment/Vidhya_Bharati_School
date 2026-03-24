@@ -27,9 +27,9 @@ const AnimatedArrow = () => (
   const tabs = [
     { id: 'A', label: 'A. GENERAL INFORMATION' },
     { id: 'B', label: 'B. DOCUMENTS AND INFORMATION' },
-    { id: 'C', label: 'C. RESULT AND ACADEMICS' },
-    { id: 'D', label: 'D. SCHOOL INFRASTRUCTURE' },
-    { id: 'E', label: 'E. STAFF\'S DETAILS' }
+    { id: 'C', label: 'C. RESULT AND ACADEMICS' },  
+    { id: 'D', label: 'D. STAFF\'S DETAILS' },
+     { id: 'E', label: 'E. SCHOOL INFRASTRUCTURE' },
   ];
 
   // --- Data Definitions (kept as is) ---
@@ -44,23 +44,23 @@ const AnimatedArrow = () => (
   ];
 
   const documentsInfo = [
-    { slNo: 1, information: 'Copies of Affiliation Letter', document: 'View Details', image:"https://drive.google.com/file/d/11GPp7W6DEi2fmpPXOKz8RDfKdq7ymZNb/preview?usp=drive_link" },
-    { slNo: 2, information: 'Copies of Trust Deed', document: 'View Details', image: "https://drive.google.com/file/d/1hGNrIqlYuqpOsp9klpwUNXRRAVz4sSM-/preview?usp=drive_link" },
-    { slNo: 3, information: 'Copy of No Objection Certificate (NOC) Issued, by The State Govt. /UT', document: 'View Details', image: "https://drive.google.com/file/d/1rcRQo_TKhp_mYsC6JH5Wz8Cb3km9hxvQ/preview?usp=drive_link" },
+    { slNo: 1, information: 'Copies of Affiliation Letter', document: 'View Details', image:"https://drive.google.com/file/d/1klwNhu-5jnUR-KATSVGW2E8KDNI6nLGW/preview?usp=sharing" },
+    { slNo: 2, information: 'Copies of Trust Deed', document: 'View Details', image: "https://drive.google.com/file/d/1wD8nsIGMejVvXxNXtLIGhVGF6GUCkQqn/preview?usp=sharing" },
+    { slNo: 3, information: 'Copy of No Objection Certificate (NOC) Issued, by The State Govt. /UT', document: 'View Details', image: "https://drive.google.com/file/d/19h3m6C8CVpxxpcfsJ-Eon51_pVnSG4m_/preview?usp=sharing" },
     { slNo: 4, information: 'Copy of Recognition Certificate', document: 'View Details', image: "https://drive.google.com/file/d/1RonxObkP_R38d3PctOe8SGLZwNNp2dGA/preview?usp=drive_link"},
     { slNo: 5, information: 'Copy of valid Building safety Certificate issued by Department of Public Works', document: 'View Details', image: "https://drive.google.com/file/d/1tpD_Rz1BrJt2xW3CdIUH6EBOX3_T5bc0/preview?usp=sharing"},
     { slNo: 6, information: 'Copies of Valid Fire Safety Certificate Issued by the Competent Authority', document: 'View Details', image: "https://drive.google.com/file/d/1KAjm3YVXdMLTkAJ7qsWgLTiSWlK08Ukk/preview?usp=sharing" },
     { slNo: 7, information: 'Copies of Valid Water, Health And Sanitation Certificates', document: 'View Details', image: "https://drive.google.com/file/d/1XEtn1mMxiubKfYD2SHoL64AkK2hvIexR/preview?usp=sharing" },
     { slNo: 8, information: 'Copies of Land Certificates', document: 'View Details', image: "https://drive.google.com/file/d/18UL133YEf_XjohPPIfV-DLFzvlE8qdz7/preview?usp=sharing" },
-    { slNo: 9, information: 'Self Declaration', document: 'View Details', image: "https://drive.google.com/file/d/1k4Lrk8KBECUDBMWWBRWMsSBrYYPdif1d/preview?usp=drive_link" }
+    { slNo: 9, information: 'Self Declaration', document: 'View Details', image: "https://drive.google.com/file/d/1NOXwMCcDC6zL-r4VmqU0ggNaXnlyRWMt/preview?usp=sharing" }
   ];
 
   const resultInfo = [
     { slNo: 1, information: 'Fee Structure of The School', document: 'View Details',image:"https://drive.google.com/file/d/1LhffrHEW0Oca8TNmNBdLWykZbBhGiOiZ/preview?usp=sharing" },
-    { slNo: 2, information: 'Annual Academics Calendar', document: 'View Details',image:"https://drive.google.com/file/d/186vLcgMx0xEyPiIW4UeYzRFgk9cvUc91/preview?usp=sharing" },
+    { slNo: 2, information: 'Annual Academics Calendar', document: 'View Details',image:"https://docs.google.com/spreadsheets/d/1aQ2sIPbDHSIxOubV3qDDjwGOw2PNj25W/edit?usp=sharing&ouid=106466173702471888051&rtpof=true&sd=true" },
     { slNo: 3, information: 'List of School Management Committee (SMC)', document: 'View Details' ,image: "https://drive.google.com/file/d/1y9ix6xnpisyovBuK7zSOY8-0HDLEUHp6/preview?usp=sharing"},
-    { slNo: 4, information: 'List of Parents Teachers Association (PTA) Members', document: 'View Details' ,image:"https://drive.google.com/file/d/186vLcgMx0xEyPiIW4UeYzRFgk9cvUc91/preview?usp=sharing"},
-    { slNo: 5, information: 'Last Three-Year Result of The Board Examination As Per Applicability', document: 'View Details' ,image:"https://drive.google.com/file/d/186vLcgMx0xEyPiIW4UeYzRFgk9cvUc91/preview?usp=sharing" }
+    { slNo: 4, information: 'List of Parents Teachers Association (PTA) Members', document: 'View Details' ,image:"https://drive.google.com/file/d/17XkI6mEKJtBN6benXJfrIX5QtRGbPQT6/preview?usp=sharing"},
+    { slNo: 5, information: 'Last Three-Year Result of The Board Examination As Per Applicability', document: 'View Details' ,image:"https://drive.google.com/file/d/1oiLUDkqNXuZAd1AV-iuaJpLZnAiIm124/preview?usp=sharing" }
   ];
 
   const infrastructureInfo = [
@@ -76,7 +76,12 @@ const AnimatedArrow = () => (
     { slNo: 10, information: 'Internet Facility (Y/N)', details: 'Yes' },
     { slNo: 11, information: 'No. of Girls Toilets', details: '24' },
     { slNo: 12, information: 'No. of Boys Toilets', details: '22' },
-    { slNo: 13, information: 'Link of YouTube Video of The Inspection of School Covering The Infrastructure of The School', details: 'YES' }
+    { 
+  slNo: 13, 
+  information: 'Link of YouTube Video of The Inspection of School Covering The Infrastructure of The School', 
+  details: 'View',
+  link: 'https://www.youtube.com/watch?si=FG5z0YgTDKkRBx14&v=a90KZ5mi-Xo&feature=youtu.be'
+}
   ];
 
   const staffInfo = [
@@ -172,7 +177,19 @@ const AnimatedArrow = () => (
                     <span className="text-gray-400 font-light italic">- Not Available -</span>
                   )
                 ) : (
-                  <span className="break-words font-semibold text-gray-800">{item.details}</span>
+                  item.link ? (
+  <motion.button
+    onClick={() => window.open(item.link, "_blank")}
+    className="text-pink-600 hover:text-pink-800 font-bold inline-flex items-center"
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+  >
+    {item.details}
+    <AnimatedArrow />
+  </motion.button>
+) : (
+  <span className="break-words font-semibold text-gray-800">{item.details}</span>
+)
                 )}
               </td>
             </motion.tr>
@@ -278,7 +295,7 @@ const AnimatedArrow = () => (
                     transition={{ duration: 0.3 }}
                   >
                     <h2 className="text-xl md:text-2xl font-extrabold text-pink-600 mb-4 border-l-4 border-yellow-400 pl-3">D. SCHOOL INFRASTRUCTURE</h2>
-                    {renderTable(infrastructureInfo)}
+                    {renderTable(staffInfo )}
                   </motion.div>
                 )}
     
@@ -291,7 +308,7 @@ const AnimatedArrow = () => (
                     transition={{ duration: 0.3 }}
                   >
                     <h2 className="text-xl md:text-2xl font-extrabold text-pink-600 mb-4 border-l-4 border-yellow-400 pl-3">E. STAFF'S DETAILS</h2>
-                    {renderTable(staffInfo)}
+                    {renderTable(infrastructureInfo)}
                   </motion.div>
                 )}
               </AnimatePresence>

@@ -24,7 +24,31 @@ const timeline = [
   { year: "2025", title: "Future Vision", text: "Planning new campus with better facilities." },
 ];
 
+const managements=[
+     {
+    name: "Dr.K.S.Ravirajan",
+   
+    designation: "President",
+    color: "sky",
+    image: "/president.jpg.jpeg"
+  },
+  {
+    name: "Sri. Srinivas Rao Nandapur	",
+ 
+    designation: "Secretary",
+    color: "pink",
+    image: "/Secretary.jpeg"
+  },
+  {
+    name: "Sri. P Venkatesh Manvikar	",
+  
+    designation: "Treasurer",
+    color: "amber",
+    image: "/treasurer.jpg.jpeg"
+  },
+]
 const management = [
+ 
   {
     name: "Smt.Katyayani Hegdekatte",
     qualification: "M.A., B.Ed",
@@ -137,6 +161,131 @@ const Management = () => {
           </div>
 
           {/* People Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            {managements.map((person, index) => {
+
+              const colors = badgeColors[person.color];
+
+              return (
+
+                <div
+                  key={index}
+                  className={`rounded-2xl border ${colors.border} ${colors.bg} p-6 text-center hover:shadow-lg transition`}
+                >
+
+                  <div className="w-24 h-24 mx-auto rounded-full overflow-hidden border-4 border-white shadow mb-4">
+                    <img
+                      src={person.image}
+                      alt={person.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+
+                  <h3 className="text-lg font-bold text-gray-900">
+                    {person.name}
+                  </h3>
+
+                  <p className="text-indigo-600 font-semibold mt-1">
+                    {person.designation}
+                  </p>
+
+                  <p className="text-gray-600 text-sm mt-2">
+                    {person.qualification}
+                  </p>
+
+                </div>
+
+              );
+
+            })}
+
+          </div>
+
+           <div class="bg-gray-50 py-10 px-4 sm:px-6 lg:px-8 font-sans text-slate-800">
+  <div class="max-w-4xl mx-auto">
+    
+    <div class="bg-indigo-900 rounded-t-2xl p-6 shadow-lg">
+      <h2 class="text-2xl font-bold text-white">Official Members List</h2>
+    </div>
+
+    <div class="bg-white shadow-xl rounded-b-2xl overflow-hidden border border-gray-200">
+      <div class="overflow-x-auto max-h-[600px] overflow-y-auto">
+        <table class="min-w-full sticky-header">
+          <thead class="bg-gray-100 sticky top-0 z-10">
+            <tr>
+              <th class="px-6 py-4 text-left text-xs font-bold text-gray-600 uppercase tracking-widest border-b">Sl. No</th>
+              <th class="px-6 py-4 text-left text-xs font-bold text-gray-600 uppercase tracking-widest border-b">Full Name</th>
+              <th class="px-6 py-4 text-left text-xs font-bold text-gray-600 uppercase tracking-widest border-b">Designation</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100">
+            <tr class="bg-indigo-50/50"><td colspan="3" class="px-6 py-2 text-xs font-bold text-indigo-700 uppercase">Executive Committee</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-500">01</td><td class="px-6 py-4 text-sm font-bold text-gray-900">Dr. K.S. Ravirajan</td><td class="px-6 py-4 text-sm text-indigo-600 font-semibold">President</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-500">02</td><td class="px-6 py-4 text-sm font-bold text-gray-900">Dr. R Raghavendra</td><td class="px-6 py-4 text-sm text-gray-600">Vice-President</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-500">03</td><td class="px-6 py-4 text-sm font-bold text-gray-900">Sri. Srinivas Rao Nandapur</td><td class="px-6 py-4 text-sm text-gray-600">Secretary</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-500">04</td><td class="px-6 py-4 text-sm font-bold text-gray-900">Sri. Raghavendra Chudamani</td><td class="px-6 py-4 text-sm text-gray-600">Joint Secretary</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-500">05</td><td class="px-6 py-4 text-sm font-bold text-gray-900">Sri. P Venkatesh Manvikar</td><td class="px-6 py-4 text-sm text-gray-600">Treasurer</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-500">06</td><td class="px-6 py-4 text-sm font-medium text-gray-900">Sri. G Somashekhara Gouda</td><td class="px-6 py-4 text-sm text-gray-500">Executive Member</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-500">07</td><td class="px-6 py-4 text-sm font-medium text-gray-900">Sri. Mohan Agarawal</td><td class="px-6 py-4 text-sm text-gray-500">Executive Member</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-500">08</td><td class="px-6 py-4 text-sm font-medium text-gray-900">Sri. Shamasundar Mundada</td><td class="px-6 py-4 text-sm text-gray-500">Executive Member</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-500">09</td><td class="px-6 py-4 text-sm font-medium text-gray-900">Sri. Vaibhav Jobaputra</td><td class="px-6 py-4 text-sm text-gray-500">Executive Member</td></tr>
+
+            <tr class="bg-gray-50"><td colspan="3" class="px-6 py-2 text-xs font-bold text-gray-600 uppercase">General Members</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-500">10</td><td class="px-6 py-4 text-sm text-gray-800">Sri. B Mohan Reddy</td><td class="px-6 py-4 text-sm text-gray-400">Member</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-500">11</td><td class="px-6 py-4 text-sm text-gray-800">Sri. Yeli Nishanth</td><td class="px-6 py-4 text-sm text-gray-400">Member</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-500">12</td><td class="px-6 py-4 text-sm text-gray-800">Sri. Dr. Harish Murthy</td><td class="px-6 py-4 text-sm text-gray-400">Member</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-500">13</td><td class="px-6 py-4 text-sm text-gray-800">Sri Arjun Gouda</td><td class="px-6 py-4 text-sm text-gray-400">Member</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-500">14</td><td class="px-6 py-4 text-sm text-gray-800">Sri. Dr. Ajit Kulkarni</td><td class="px-6 py-4 text-sm text-gray-400">Member</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-500">15</td><td class="px-6 py-4 text-sm text-gray-800">Sri. S. Venkat Krishnan</td><td class="px-6 py-4 text-sm text-gray-400">Member</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-500">16</td><td class="px-6 py-4 text-sm text-gray-800">Sri. Ramchandra Prabhu U</td><td class="px-6 py-4 text-sm text-gray-400">Member</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-500">17</td><td class="px-6 py-4 text-sm text-gray-800">Sri. A.S. Anand</td><td class="px-6 py-4 text-sm text-gray-400">Member</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-500">18</td><td class="px-6 py-4 text-sm text-gray-800">Sri. Narendra Mootha</td><td class="px-6 py-4 text-sm text-gray-400">Member</td></tr>
+
+            <tr class="bg-blue-900 text-white"><td colspan="3" class="px-6 py-2 text-xs font-bold uppercase">Founder Members</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-400">19</td><td class="px-6 py-4 text-sm font-medium text-gray-900">Dr. Raghavendra Rao Kulkarni</td><td class="px-6 py-4 text-sm text-blue-600">Founder</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-500">20</td><td class="px-6 py-4 text-sm font-medium text-gray-900">Sri. Parasmal Sukhani</td><td class="px-6 py-4 text-sm text-blue-600">Founder</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-500">21</td><td class="px-6 py-4 text-sm font-medium text-gray-900">Sri M.S. Gururajachar</td><td class="px-6 py-4 text-sm text-blue-600">Founder</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-500">22</td><td class="px-6 py-4 text-sm font-medium text-gray-900">Sri Harikant Hanchate</td><td class="px-6 py-4 text-sm text-blue-600">Founder</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-500">23</td><td class="px-6 py-4 text-sm font-medium text-gray-900">Sri. Yell Gangadhar</td><td class="px-6 py-4 text-sm text-blue-600">Founder</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-500">24</td><td class="px-6 py-4 text-sm font-medium text-gray-900">Dr. A. Shankar</td><td class="px-6 py-4 text-sm text-blue-600">Founder</td></tr>
+
+            <tr class="bg-gray-100"><td colspan="3" class="px-6 py-2 text-xs font-bold text-gray-500 uppercase italic">In Memoriam (Late Founders)</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-400">25</td><td class="px-6 py-4 text-sm text-gray-500 italic">Late Sri. Kantilal Bohra</td><td class="px-6 py-4 text-sm text-gray-400 italic text-xs">Late Founder</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-400">26</td><td class="px-6 py-4 text-sm text-gray-500 italic">Late Sri Nandapur Raghavendra Rao</td><td class="px-6 py-4 text-sm text-gray-400 italic text-xs">Late Founder</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-400">27</td><td class="px-6 py-4 text-sm text-gray-500 italic">Late Sri. Magnala Thakarsi</td><td class="px-6 py-4 text-sm text-gray-400 italic text-xs">Late Founder</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-400">28</td><td class="px-6 py-4 text-sm text-gray-500 italic">Late Sri Dharmaraj Desai</td><td class="px-6 py-4 text-sm text-gray-400 italic text-xs">Late Founder</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-400">29</td><td class="px-6 py-4 text-sm text-gray-500 italic">Late Sri S.G. Lokhande</td><td class="px-6 py-4 text-sm text-gray-400 italic text-xs">Late Founder</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-400">30</td><td class="px-6 py-4 text-sm text-gray-500 italic">Late Sri M.L. Nair</td><td class="px-6 py-4 text-sm text-gray-400 italic text-xs">Late Founder</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-400">31</td><td class="px-6 py-4 text-sm text-gray-500 italic">Late Sri Sharad Sampath</td><td class="px-6 py-4 text-sm text-gray-400 italic text-xs">Late Founder</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-400">32</td><td class="px-6 py-4 text-sm text-gray-500 italic">Late Sri Shivrajappa Genekal</td><td class="px-6 py-4 text-sm text-gray-400 italic text-xs">Late Founder</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-400">33</td><td class="px-6 py-4 text-sm text-gray-500 italic">Late Sri H.V. Manvikar</td><td class="px-6 py-4 text-sm text-gray-400 italic text-xs">Late Founder</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-400">34</td><td class="px-6 py-4 text-sm text-gray-500 italic">Late Sri.S.Basavi Reddy</td><td class="px-6 py-4 text-sm text-gray-400 italic text-xs">Late Founder</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-400">35</td><td class="px-6 py-4 text-sm text-gray-500 italic">Late Sri Y.Srinivas Shetty</td><td class="px-6 py-4 text-sm text-gray-400 italic text-xs">Late Founder</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-400">36</td><td class="px-6 py-4 text-sm text-gray-500 italic">Late Sri Vyasraj Murthy</td><td class="px-6 py-4 text-sm text-gray-400 italic text-xs">Late Founder</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-400">37</td><td class="px-6 py-4 text-sm text-gray-500 italic">Late Sri B.Laxman</td><td class="px-6 py-4 text-sm text-gray-400 italic text-xs">Late Founder</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-400">38</td><td class="px-6 py-4 text-sm text-gray-500 italic">Late Sri Soma Raman Gouda</td><td class="px-6 py-4 text-sm text-gray-400 italic text-xs">Late Founder</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-400">39</td><td class="px-6 py-4 text-sm text-gray-500 italic">Late Sri Shantilal Jain</td><td class="px-6 py-4 text-sm text-gray-400 italic text-xs">Late Founder</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-400">40</td><td class="px-6 py-4 text-sm text-gray-500 italic">Late Sri P.K. Subramanyam</td><td class="px-6 py-4 text-sm text-gray-400 italic text-xs">Late Founder</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-400">41</td><td class="px-6 py-4 text-sm text-gray-500 italic">Late Sri T.K. Hanamasagar</td><td class="px-6 py-4 text-sm text-gray-400 italic text-xs">Late Founder</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-400">42</td><td class="px-6 py-4 text-sm text-gray-500 italic">Late Sri Madhava Bhat</td><td class="px-6 py-4 text-sm text-gray-400 italic text-xs">Late Founder</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-400">43</td><td class="px-6 py-4 text-sm text-gray-500 italic">Late Sri Shantilal Bhandari</td><td class="px-6 py-4 text-sm text-gray-400 italic text-xs">Late Founder</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-400">44</td><td class="px-6 py-4 text-sm text-gray-500 italic">Late Sri. Bellam Chandrappa</td><td class="px-6 py-4 text-sm text-gray-400 italic text-xs">Late Founder</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-400">45</td><td class="px-6 py-4 text-sm text-gray-500 italic">Late Sri. Chittam Panduranga Shetty</td><td class="px-6 py-4 text-sm text-gray-400 italic text-xs">Late Founder</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-400">46</td><td class="px-6 py-4 text-sm text-gray-500 italic">Late Dr. D. Madhukant</td><td class="px-6 py-4 text-sm text-gray-400 italic text-xs">Late Founder</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-400">47</td><td class="px-6 py-4 text-sm text-gray-500 italic">Late Sri T.G. Raghavendra Rao</td><td class="px-6 py-4 text-sm text-gray-400 italic text-xs">Late Founder</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-400">48</td><td class="px-6 py-4 text-sm text-gray-500 italic">Late Sri Vijayaraj Bhandari</td><td class="px-6 py-4 text-sm text-gray-400 italic text-xs">Late Founder</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-400">49</td><td class="px-6 py-4 text-sm text-gray-500 italic">Late Sri. Bhojaraj Hosurkar</td><td class="px-6 py-4 text-sm text-gray-400 italic text-xs">Late Founder</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-400">50</td><td class="px-6 py-4 text-sm text-gray-500 italic">Late Sri A.B Gokhale</td><td class="px-6 py-4 text-sm text-gray-400 italic text-xs">Late Founder</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-400">51</td><td class="px-6 py-4 text-sm text-gray-500 italic">Late Sri Balakishan</td><td class="px-6 py-4 text-sm text-gray-400 italic text-xs">Late Founder</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-400">52</td><td class="px-6 py-4 text-sm text-gray-500 italic">Late Sri. Sanjay Kumar Bhandri</td><td class="px-6 py-4 text-sm text-gray-400 italic text-xs">Late Founder</td></tr>
+            <tr><td class="px-6 py-4 text-sm text-gray-400">53</td><td class="px-6 py-4 text-sm text-gray-500 italic">Late Sri Jawahar Jain</td><td class="px-6 py-4 text-sm text-gray-400 italic text-xs">Late Founder</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
             {management.map((person, index) => {
@@ -177,6 +326,8 @@ const Management = () => {
             })}
 
           </div>
+
+         
            <StaffPage />
         </div>
       </section>
