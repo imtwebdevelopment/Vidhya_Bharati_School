@@ -44,7 +44,7 @@ const managements=[
   
     designation: "Treasurer",
     color: "amber",
-    image: "/treasurer.jpg.jpeg"
+    image: "/treasure.jpeg"
   },
 ]
 const management = [

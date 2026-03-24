@@ -37,7 +37,7 @@ const AnimatedArrow = () => (
     { slNo: 1, information: 'Name of The School', details: 'Vidya Bharati English Medium Primary School' },
     { slNo: 2, information: 'Affiliation No. (If Applicable)', details: '830589' },
     { slNo: 3, information: 'School Code (If Applicable)', details: '45582' },
-    { slNo: 4, information: 'Complete Address With Pin Code', details: 'Yeramaras Camp, RCR, Yeramaras Camp Raichur Pin - 584 135 Karnataka State' },
+    { slNo: 4, information: 'Complete Address With Pin Code', details: 'SriRam Nagar, Station Road, Raichur, Karnataka - 584101' },
     { slNo: 5, information: 'Principal Name & Qualification', details: 'Katyayani Hegdekatte (MA BED)' },
     { slNo: 6, information: 'School E-mail Id', details: 'vbskcbse2014@gmail.com' },
     { slNo: 7, information: 'Contact Details (Landline/Mobile)', details: '+91 8532-221980' }
@@ -60,24 +60,22 @@ const AnimatedArrow = () => (
     { slNo: 2, information: 'Annual Academics Calendar', document: 'View Details',image:"https://docs.google.com/spreadsheets/d/1aQ2sIPbDHSIxOubV3qDDjwGOw2PNj25W/edit?usp=sharing&ouid=106466173702471888051&rtpof=true&sd=true" },
     { slNo: 3, information: 'List of School Management Committee (SMC)', document: 'View Details' ,image: "https://drive.google.com/file/d/1y9ix6xnpisyovBuK7zSOY8-0HDLEUHp6/preview?usp=sharing"},
     { slNo: 4, information: 'List of Parents Teachers Association (PTA) Members', document: 'View Details' ,image:"https://drive.google.com/file/d/17XkI6mEKJtBN6benXJfrIX5QtRGbPQT6/preview?usp=sharing"},
-    { slNo: 5, information: 'Last Three-Year Result of The Board Examination As Per Applicability', document: 'View Details' ,image:"https://drive.google.com/file/d/1oiLUDkqNXuZAd1AV-iuaJpLZnAiIm124/preview?usp=sharing" }
+    { slNo: 5, information: 'Last Three-Year Result of The Board Examination As Per Applicability', document: 'View Details' ,image:"https://drive.google.com/file/d/1FHJTZPtz9KkoTJbKx18p3AtxYVOp2-zq/view?usp=sharing" }
   ];
 
   const infrastructureInfo = [
-    { slNo: 1, information: 'Total Campus Area of The School (In Square Mtr)', details: '34094 (In Square Mtr)' },
-    { slNo: 2, information: 'No. Class Rooms', details: '30' },
-    { slNo: 3, information: 'Size of The Class Rooms (In Square Mtr)', details: '7.92X6.71=47 (In Square Mtr)' },
-    { slNo: 4, information: 'No. and Size of Laboratories Including Computer Labs (In Sq. Mtr)', details: '265.69 (In Sq. Mtr)' },
-    { slNo: 5, information: 'Computer Lab - 01', details: '7.92X13.43=106.29 (In Sq. Mtr)' },
-    { slNo: 6, information: 'Composite Science Lab - 01', details: '7.92X13.42=106.29 (In Sq. Mtr)' },
-    { slNo: 7, information: 'Chemistry Lab - 01', details: '0' },
-    { slNo: 8, information: 'Biology Lab - 01', details: '0' },
-    { slNo: 9, information: 'Maths Lab - 01', details: '7.92X6.71=53.14 (In Sq. Mtr)' },
-    { slNo: 10, information: 'Internet Facility (Y/N)', details: 'Yes' },
-    { slNo: 11, information: 'No. of Girls Toilets', details: '24' },
-    { slNo: 12, information: 'No. of Boys Toilets', details: '22' },
+    { slNo: 1, information: 'Total Campus Area of The School (In Square Mtr)', details: '6071 (In Square Mtr)' },
+    { slNo: 2, information: 'No. and Size of The Class Rooms (In Square Mtr)', details: '31 (30x20 In Square Mtr)' },
+    { slNo: 3, information: 'No. and Size of Laboratories Including Computer Labs (In Sq. Mtr)', details: '2 (30x25 In Sq. Mtr)' },
+
+    { slNo: 4, information: 'No. and Size of Library (In Sq. Mtr)', details: '1 ( 30x25 In Sq. Mtr)' },
+  
+    { slNo: 5, information: 'Internet Facility (Y/N)', details: 'Yes' },
+    { slNo: 6, information: 'No. of Girls Toilets', details: '08' },
+    { slNo: 7, information: 'No. of Boys Toilets', details: '13' },
+    { slNo: 8, information: 'No. of CWSN Toilets', details: '01' },
     { 
-  slNo: 13, 
+  slNo: 9, 
   information: 'Link of YouTube Video of The Inspection of School Covering The Infrastructure of The School', 
   details: 'View',
   link: 'https://www.youtube.com/watch?si=FG5z0YgTDKkRBx14&v=a90KZ5mi-Xo&feature=youtu.be'
@@ -85,14 +83,19 @@ const AnimatedArrow = () => (
   ];
 
   const staffInfo = [
-    { slNo: 1, information: 'Principal', details: 'Katyayani Hegdekatte (M.A., B.Ed)' },
-    { slNo: 2, information: 'Total No. of Teachers', details: '75' },
-    { slNo: 3, information: 'PGT', details: '07' },
-    { slNo: 4, information: 'PRT', details: '13' },
-    { slNo: 5, information: 'TGT', details: '33' },
-    { slNo: 6, information: 'PTI', details: 'Miss Deepa(B.Com., C.P.Ed (M.P.Ed))' },
-    { slNo: 7, information: 'Librarian', details: 'Sri. Shekhrappa (M.L.I.Sc)' },
-    { slNo: 8, information: 'Teachers Section Ratio', details: '1:15' },
+    { slNo: 1, information: 'Principal', details: '01' },
+     { slNo: 2, information: 'Vice Principal', details: '01' },
+      { slNo: 3, information: 'Head Mistress/Head Master', details: 'NA' },
+    { slNo: 4, information: 'Total No. of Teachers', details: '62' },
+    { slNo: 5, information: 'PGT', details: '-' },
+  
+    { slNo: 6, information: 'TGT', details: '32' },
+      { slNo: 7, information: 'PRT', details: '21' },
+  
+    
+    { slNo: 8, information: 'Teachers Section Ratio', details: '1:1.5' },
+      { slNo: 9, information: 'Details of Special Educator', details: 'smt.Gangamma' },
+        { slNo: 10, information: 'Details of Counseller & Wellness Teacher', details: 'Mr.Arun' },
   ];
   // --- End of Data Definitions ---
 
@@ -112,6 +115,52 @@ const AnimatedArrow = () => (
       transition={{ duration: 0.5 }}
     >
       <h3 className="text-xl font-extrabold text-pink-600 mb-4">RESULT CLASS X</h3>
+      <div className="overflow-x-auto">
+        <table className="w-full border-collapse border border-yellow-400 min-w-full">
+          <thead>
+            <tr className="bg-yellow-400/80 text-sky-900">
+              <th className="border border-yellow-500 px-3 md:px-5 py-2 text-left font-extrabold text-xs md:text-sm">Sl. No.</th>
+              <th className="border border-yellow-500 px-3 md:px-5 py-2 text-left font-extrabold text-xs md:text-sm">Year</th>
+              <th className="border border-yellow-500 px-3 md:px-5 py-2 text-left font-extrabold text-xs md:text-sm">No. of Registered Students</th>
+              <th className="border border-yellow-500 px-3 md:px-5 py-2 text-left font-extrabold text-xs md:text-sm">No. of Students Passed</th>
+              <th className="border border-yellow-500 px-3 md:px-5 py-2 text-left font-extrabold text-xs md:text-sm">Pass Percentage</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="bg-white">
+              <td className="border border-yellow-200 px-3 md:px-5 py-3 text-xs md:text-sm">1</td>
+              <td className="border border-yellow-200 px-3 md:px-5 py-3 text-xs md:text-sm font-bold text-pink-600">2024-25</td>
+              <td className="border border-yellow-200 px-3 md:px-5 py-3 text-xs md:text-sm">80</td>
+              <td className="border border-yellow-200 px-3 md:px-5 py-3 text-xs md:text-sm">80</td>
+              <td className="border border-yellow-200 px-3 md:px-5 py-3 text-xs md:text-sm">100%</td>
+            </tr>
+              <tr className="bg-white">
+              <td className="border border-yellow-200 px-3 md:px-5 py-3 text-xs md:text-sm">2</td>
+              <td className="border border-yellow-200 px-3 md:px-5 py-3 text-xs md:text-sm font-bold text-pink-600">2023-24</td>
+              <td className="border border-yellow-200 px-3 md:px-5 py-3 text-xs md:text-sm">47</td>
+              <td className="border border-yellow-200 px-3 md:px-5 py-3 text-xs md:text-sm">47</td>
+              <td className="border border-yellow-200 px-3 md:px-5 py-3 text-xs md:text-sm">100%</td>
+            </tr>
+              <tr className="bg-white">
+              <td className="border border-yellow-200 px-3 md:px-5 py-3 text-xs md:text-sm">3</td>
+              <td className="border border-yellow-200 px-3 md:px-5 py-3 text-xs md:text-sm font-bold text-pink-600">2022-23</td>
+              <td className="border border-yellow-200 px-3 md:px-5 py-3 text-xs md:text-sm">52</td>
+              <td className="border border-yellow-200 px-3 md:px-5 py-3 text-xs md:text-sm">52</td>
+              <td className="border border-yellow-200 px-3 md:px-5 py-3 text-xs md:text-sm">100%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </motion.div>
+  );
+ const renderResultTableXII = () => (
+    <motion.div
+      className="mt-8 p-4 bg-yellow-50 rounded-lg shadow-inner border-l-4 border-yellow-400"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      <h3 className="text-xl font-extrabold text-pink-600 mb-4">RESULT CLASS XII</h3>
       <div className="overflow-x-auto">
         <table className="w-full border-collapse border border-yellow-400 min-w-full">
           <thead>
@@ -283,6 +332,19 @@ const AnimatedArrow = () => (
                     <h2 className="text-xl md:text-2xl font-extrabold text-pink-600 mb-4 border-l-4 border-yellow-400 pl-3">C. RESULT AND ACADEMICS</h2>
                     {renderTable(resultInfo, true)}
                     {renderResultTable()}
+                  </motion.div>
+                )}
+                   {activeTab === 'C' && (
+                  <motion.div
+                    key="C"
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -20 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                  
+                   
+                    {renderResultTableXII()}
                   </motion.div>
                 )}
     
