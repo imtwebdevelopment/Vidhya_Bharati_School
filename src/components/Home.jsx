@@ -81,11 +81,13 @@ const celebrations = [
   const testimonials = [
     {
       text: "Vidya Bharati focuses not just on marks but on the overall sanskar of the child. The teachers are incredibly dedicated to national values.",
-      image: "https://i.pravatar.cc/150?u=student1"
+      image: "/p.jpeg",
+      name:" Smt. Anuradha"
     },
     {
       text: "The integration of modern science with our cultural roots makes Vidya Bharati the best choice for my children's future.",
-      image: "https://i.pravatar.cc/150?u=student2"
+      image: "/p1.jpeg",
+       name:"Gyanchand saklecha"
     }
   ];
 
@@ -310,7 +312,11 @@ const celebrations = [
                 <div className="mt-12">
                   <div className="w-32 h-32 rounded-full border-[6px] border-yellow-400 overflow-hidden shadow-xl bg-white">
                     <img src={item.image} className="w-full h-full object-cover" alt="Vidya Bharati Parent" />
+                 
                   </div>
+                    <span className="mt-4  text-center font-medium text-white">
+      {item.name}
+    </span>
                 </div>
               </div>
             ))}
