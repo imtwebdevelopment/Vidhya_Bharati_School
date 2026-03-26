@@ -69,6 +69,7 @@ const Home = () => {
     { letter: 'R', word: 'Respect for Culture', color: 'bg-[#9C27B0]' },
     { letter: 'A', word: 'Analytical Thinking', color: 'bg-[#F44336]' },
     { letter: 'T', word: 'Team Spirit', color: 'bg-[#009688]' },
+    { letter: 'I', word: 'Intellectual Growth', color: 'bg-[#FFC107]' }
   ];
 
 const celebrations = [

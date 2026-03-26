@@ -60,7 +60,7 @@ const Navbar = () => {
     { label: "Vision & Mission", to: "/mission-vision" },
     { label: "Activities", to: "/schoollife-activities"},
     { label: "History", to: "/history" },
-    { label: "Our Staff", to: "/our-staff" },
+    // { label: "Our Staff", to: "/our-staff" },
     { label: "Accreditations", to: "/accreditations" },
     {label:"Mandatory Disclosure",to:"/public"}
   ];
