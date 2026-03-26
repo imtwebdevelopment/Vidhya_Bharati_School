@@ -87,7 +87,7 @@ const celebrations = [
     {
       text: "The integration of modern science with our cultural roots makes Vidya Bharati the best choice for my children's future.",
       image: "/p1.jpeg",
-       name:"Gyanchand saklecha"
+       name:"Sri Gyanchand saklecha"
     }
   ];
 
