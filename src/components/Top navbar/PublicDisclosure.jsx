@@ -294,86 +294,84 @@ const AnimatedArrow = () => (
               className="bg-white rounded-b-xl rounded-t-none shadow-2xl border-t-2 border-pink-500 p-4 md:p-6"
               layout // Enables smooth layout animation when content changes
             >
-              <AnimatePresence mode="wait">
-                {activeTab === 'A' && (
-                  <motion.div
-                    key="A"
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -20 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <h2 className="text-xl md:text-2xl font-extrabold text-pink-600 mb-4 border-l-4 border-yellow-400 pl-3">A. GENERAL INFORMATION</h2>
-                    {renderTable(generalInfo)}
-                  </motion.div>
-                )}
-    
-                {activeTab === 'B' && (
-                  <motion.div
-                    key="B"
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -20 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <h2 className="text-xl md:text-2xl font-extrabold text-pink-600 mb-4 border-l-4 border-yellow-400 pl-3">B. DOCUMENTS AND INFORMATION</h2>
-                    {renderTable(documentsInfo, true)}
-                  </motion.div>
-                )}
-    
-                {activeTab === 'C' && (
-                  <motion.div
-                    key="C"
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -20 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <h2 className="text-xl md:text-2xl font-extrabold text-pink-600 mb-4 border-l-4 border-yellow-400 pl-3">C. RESULT AND ACADEMICS</h2>
-                    {renderTable(resultInfo, true)}
-                    {renderResultTable()}
-                  </motion.div>
-                )}
-                   {activeTab === 'C' && (
-                  <motion.div
-                    key="C"
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -20 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                  
-                   
-                    {renderResultTableXII()}
-                  </motion.div>
-                )}
-    
-                {activeTab === 'D' && (
-                  <motion.div
-                    key="D"
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -20 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <h2 className="text-xl md:text-2xl font-extrabold text-pink-600 mb-4 border-l-4 border-yellow-400 pl-3">D. SCHOOL INFRASTRUCTURE</h2>
-                    {renderTable(staffInfo )}
-                  </motion.div>
-                )}
-    
-                {activeTab === 'E' && (
-                  <motion.div
-                    key="E"
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -20 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <h2 className="text-xl md:text-2xl font-extrabold text-pink-600 mb-4 border-l-4 border-yellow-400 pl-3">E. STAFF'S DETAILS</h2>
-                    {renderTable(infrastructureInfo)}
-                  </motion.div>
-                )}
-              </AnimatePresence>
+            <AnimatePresence mode="wait">
+  {activeTab === 'A' && (
+    <motion.div
+      key="A"
+      initial={{ opacity: 0, x: 20 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: -20 }}
+      transition={{ duration: 0.3 }}
+    >
+      <h2 className="text-xl md:text-2xl font-extrabold text-pink-600 mb-4 border-l-4 border-yellow-400 pl-3">
+        A. GENERAL INFORMATION
+      </h2>
+      {renderTable(generalInfo)}
+    </motion.div>
+  )}
+
+  {activeTab === 'B' && (
+    <motion.div
+      key="B"
+      initial={{ opacity: 0, x: 20 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: -20 }}
+      transition={{ duration: 0.3 }}
+    >
+      <h2 className="text-xl md:text-2xl font-extrabold text-pink-600 mb-4 border-l-4 border-yellow-400 pl-3">
+        B. DOCUMENTS AND INFORMATION
+      </h2>
+      {renderTable(documentsInfo, true)}
+    </motion.div>
+  )}
+
+  {activeTab === 'C' && (
+    <motion.div
+      key="C"
+      initial={{ opacity: 0, x: 20 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: -20 }}
+      transition={{ duration: 0.3 }}
+    >
+      <h2 className="text-xl md:text-2xl font-extrabold text-pink-600 mb-4 border-l-4 border-yellow-400 pl-3">
+        C. RESULT AND ACADEMICS
+      </h2>
+      {renderTable(resultInfo, true)}
+      {renderResultTable()}
+      {renderResultTableXII()}
+    </motion.div>
+  )}
+
+  {activeTab === 'D' && (
+    <motion.div
+      key="D"
+      initial={{ opacity: 0, x: 20 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: -20 }}
+      transition={{ duration: 0.3 }}
+    >
+      <h2 className="text-xl md:text-2xl font-extrabold text-pink-600 mb-4 border-l-4 border-yellow-400 pl-3">
+        D. STAFF'S DETAILS
+      </h2>
+      {renderTable(staffInfo)}
+    </motion.div>
+  )}
+
+  {activeTab === 'E' && (
+    <motion.div
+      key="E"
+      initial={{ opacity: 0, x: 20 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: -20 }}
+      transition={{ duration: 0.3 }}
+    >
+      <h2 className="text-xl md:text-2xl font-extrabold text-pink-600 mb-4 border-l-4 border-yellow-400 pl-3">
+        E. SCHOOL INFRASTRUCTURE
+      </h2>
+      {renderTable(infrastructureInfo)}
+    </motion.div>
+  )}
+</AnimatePresence>
             </motion.div>
           </div>
     
