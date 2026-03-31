@@ -52,7 +52,8 @@ const AnimatedArrow = () => (
     { slNo: 6, information: 'Copies of Valid Fire Safety Certificate Issued by the Competent Authority', document: 'View Details', image: "https://drive.google.com/file/d/1KAjm3YVXdMLTkAJ7qsWgLTiSWlK08Ukk/preview?usp=sharing" },
     { slNo: 7, information: 'Copies of Valid Water, Health And Sanitation Certificates', document: 'View Details', image: "https://drive.google.com/file/d/1XEtn1mMxiubKfYD2SHoL64AkK2hvIexR/preview?usp=sharing" },
     { slNo: 8, information: 'Copies of Land Certificates', document: 'View Details', image: "https://drive.google.com/file/d/18UL133YEf_XjohPPIfV-DLFzvlE8qdz7/preview?usp=sharing" },
-    { slNo: 9, information: 'Self Declaration', document: 'View Details', image: "https://drive.google.com/file/d/1NOXwMCcDC6zL-r4VmqU0ggNaXnlyRWMt/preview?usp=sharing" }
+    { slNo: 9, information: 'Self Declaration', document: 'View Details', image: "https://drive.google.com/file/d/1NOXwMCcDC6zL-r4VmqU0ggNaXnlyRWMt/preview?usp=sharing" },
+    {slNo:10,information:'Mantatory Disclosure',document:'View Details',image:"https://drive.google.com/file/d/1Sys2rd7djAsE8jsEtLEoAvhehGOyGOpI/preview?usp=sharing"}
   ];
 
   const resultInfo = [
