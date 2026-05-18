@@ -47,16 +47,16 @@ const AnimatedArrow = () => (
   ];
 
   const documentsInfo = [
-    { slNo: 1, information: 'AFFILIATION, First permission & Extention', document: 'View Details', image: firstPermissionExt },
-    { slNo: 2, information: 'TRUST 2025-26', document: 'View Details', image: trustPdf2526 },
+    { slNo: 1, information: 'Copies of Affiliation Letter', document: 'View Details', image: firstPermissionExt },
+    { slNo: 2, information: 'Copies of Trust Deed', document: 'View Details', image: trustPdf2526 },
     { slNo: 3, information: 'Copy of No Objection Certificate (NOC) Issued, by The State Govt. /UT', document: 'View Details', image: "https://drive.google.com/file/d/19h3m6C8CVpxxpcfsJ-Eon51_pVnSG4m_/preview?usp=sharing" },
     { slNo: 4, information: 'Copy of Recognition Certificate', document: 'View Details', image: "https://drive.google.com/file/d/1RonxObkP_R38d3PctOe8SGLZwNNp2dGA/preview?usp=drive_link"},
     { slNo: 5, information: 'Copy of valid Building safety Certificate issued by Department of Public Works', document: 'View Details', image: "https://drive.google.com/file/d/1tpD_Rz1BrJt2xW3CdIUH6EBOX3_T5bc0/preview?usp=sharing"},
     { slNo: 6, information: 'Copies of Valid Fire Safety Certificate Issued by the Competent Authority', document: 'View Details', image: "https://drive.google.com/file/d/1KAjm3YVXdMLTkAJ7qsWgLTiSWlK08Ukk/preview?usp=sharing" },
-    { slNo: 7, information: 'HEALTH SANITATION - WATER TEST Rpt', document: 'View Details', image: waterTestRpt },
+    { slNo: 7, information: 'Copies of Valid Water, Health And Sanitation Certificates', document: 'View Details', image: waterTestRpt },
     { slNo: 8, information: 'Copies of Land Certificates', document: 'View Details', image: "https://drive.google.com/file/d/18UL133YEf_XjohPPIfV-DLFzvlE8qdz7/preview?usp=sharing" },
     { slNo: 9, information: 'Self Declaration', document: 'View Details', image: "https://drive.google.com/file/d/1NOXwMCcDC6zL-r4VmqU0ggNaXnlyRWMt/preview?usp=sharing" },
-    {slNo:10,information:'Mantatory Disclosure',document:'View Details',image:"https://drive.google.com/file/d/1Sys2rd7djAsE8jsEtLEoAvhehGOyGOpI/preview?usp=sharing"}
+    { slNo: 10, information: 'Mandatory Disclosure', document: 'View Details', image: "https://drive.google.com/file/d/1Sys2rd7djAsE8jsEtLEoAvhehGOyGOpI/preview?usp=sharing" }
   ];
 
   const resultInfo = [
